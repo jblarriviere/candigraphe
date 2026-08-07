@@ -223,6 +223,63 @@
   button.next:hover { background: var(--burgundy-deep); }
   button.next:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
+  .controls-panel {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 22px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .control-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+  }
+
+  .control-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    cursor: pointer;
+    background: var(--paper);
+    color: var(--ink-soft);
+    transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+    user-select: none;
+  }
+  .pill input { display: none; }
+  .pill.active {
+    border-color: var(--burgundy);
+    background: rgba(122,46,46,0.08);
+    color: var(--ink);
+  }
+  .pill:hover { border-color: var(--burgundy); }
+
   .empty-state {
     text-align: center;
     padding: 40px 20px;
@@ -256,6 +313,18 @@
     <div class="stat"><b id="stat-streak">0</b>Série</div>
   </div>
 
+  <div class="controls-panel" id="controls-panel">
+    <div class="control-group" data-control="type">
+      <span class="control-label">Type de mot</span>
+      <div class="pill-group" id="type-filter-group">
+        <label class="pill"><input type="checkbox" value="nom" checked><span>Nom</span></label>
+        <label class="pill"><input type="checkbox" value="adjectif" checked><span>Adjectif</span></label>
+        <label class="pill"><input type="checkbox" value="adverbe" checked><span>Adverbe</span></label>
+        <label class="pill"><input type="checkbox" value="verbe" checked><span>Verbe</span></label>
+      </div>
+    </div>
+  </div>
+
   <div id="quiz-area"></div>
 
 </div>
@@ -275,6 +344,14 @@
   let score = 0, total = 0, streak = 0;
   let answered = false;
 
+  // ---- Contrôles ----
+  // État des filtres actifs. Pensé pour accueillir d'autres contrôles plus tard :
+  // chaque groupe de contrôle a sa propre entrée ici, et rebuildBank() applique
+  // tous les filtres actifs les uns après les autres.
+  const filters = {
+    types: new Set(['nom', 'adjectif', 'adverbe', 'verbe']),
+  };
+
   const quizArea = document.getElementById('quiz-area');
   const statScore = document.getElementById('stat-score');
   const statTotal = document.getElementById('stat-total');
@@ -290,7 +367,7 @@
   }
 
   function rebuildBank() {
-    bank = importedWords;
+    bank = importedWords.filter(w => filters.types.has(w.type));
   }
 
   function updateStats() {
@@ -300,7 +377,10 @@
   }
 
   function renderEmpty() {
-    quizArea.innerHTML = `<div class="card"><div class="empty-state">Impossible de charger la liste de mots. Essaie de recharger la page.</div></div>`;
+    const message = importedWords.length === 0
+      ? "Impossible de charger la liste de mots. Essaie de recharger la page."
+      : "Pas assez de mots pour ces filtres. Sélectionne d'autres types.";
+    quizArea.innerHTML = `<div class="card"><div class="empty-state">${message}</div></div>`;
   }
 
   function newQuestion() {
@@ -393,6 +473,26 @@
     div.textContent = str;
     return div.innerHTML;
   }
+
+  // ---- Groupe de contrôle : type de mot ----
+  // Chaque case à cocher pilote filters.types. On refuse de tout décocher
+  // (il faut au moins un type sélectionné) pour ne jamais vider la banque.
+  document.querySelectorAll('#type-filter-group .pill input').forEach(input => {
+    input.closest('.pill').classList.toggle('active', input.checked);
+    input.addEventListener('change', () => {
+      if (input.checked) {
+        filters.types.add(input.value);
+      } else if (filters.types.size > 1) {
+        filters.types.delete(input.value);
+      } else {
+        input.checked = true;
+        return;
+      }
+      input.closest('.pill').classList.toggle('active', input.checked);
+      rebuildBank();
+      newQuestion();
+    });
+  });
 
   async function loadImportedWords() {
     try {
