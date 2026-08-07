@@ -223,118 +223,6 @@
   button.next:hover { background: var(--burgundy-deep); }
   button.next:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
-  .toolbar {
-    margin-top: 28px;
-    display: flex;
-    justify-content: center;
-  }
-  .toolbar button {
-    background: none;
-    border: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    cursor: pointer;
-    padding: 6px;
-  }
-  .toolbar button:hover { color: var(--burgundy); }
-
-  .panel {
-    margin-top: 18px;
-    background: var(--paper-2);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    display: none;
-  }
-  .panel.open { display: block; }
-
-  .panel h2 {
-    font-family: 'Fraunces', serif;
-    font-size: 18px;
-    margin: 0 0 6px;
-  }
-  .panel p.hint {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin: 0 0 16px;
-    line-height: 1.5;
-  }
-  .panel code {
-    font-family: 'JetBrains Mono', monospace;
-    background: rgba(122,46,46,0.08);
-    padding: 1px 5px;
-    border-radius: 2px;
-    font-size: 12px;
-  }
-
-  .add-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-  .add-form label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    display: block;
-    margin-bottom: 4px;
-  }
-  .add-form input, .add-form textarea {
-    width: 100%;
-    font-family: 'Source Serif 4', serif;
-    font-size: 14px;
-    padding: 9px 11px;
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    background: var(--paper);
-    color: var(--ink);
-  }
-  .add-form textarea { min-height: 60px; resize: vertical; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
-  .add-form .row3 { display: grid; grid-template-columns: 1fr; gap: 8px; }
-
-  .panel-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
-  .btn-secondary, .btn-danger {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: var(--radius);
-    padding: 10px 16px;
-    cursor: pointer;
-    border: 1px solid var(--rule);
-    background: var(--paper);
-    color: var(--ink);
-  }
-  .btn-secondary:hover { border-color: var(--burgundy); color: var(--burgundy); }
-  .btn-danger { border-color: var(--red); color: var(--red); background: var(--red-bg); }
-  .btn-danger:hover { background: #eccbc4; }
-
-  .wordlist-count {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--ink-soft);
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px dashed var(--rule);
-  }
-
-  .msg {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    margin-top: 10px;
-    min-height: 14px;
-  }
-  .msg.ok { color: var(--green); }
-  .msg.err { color: var(--red); }
-
   .empty-state {
     text-align: center;
     padding: 40px 20px;
@@ -366,75 +254,9 @@
     <div class="stat"><b id="stat-score">0</b>Score</div>
     <div class="stat"><b id="stat-total">0</b>Répondues</div>
     <div class="stat"><b id="stat-streak">0</b>Série</div>
-    <div class="stat"><b id="stat-bank">0</b>Mots en banque</div>
   </div>
 
   <div id="quiz-area"></div>
-
-  <div class="toolbar">
-    <button id="toggle-panel">Gérer ma liste de mots</button>
-  </div>
-
-  <div class="panel" id="panel">
-    <h2>Ma liste de mots</h2>
-    <p class="hint">
-      La banque de base est chargée automatiquement.
-      Ajoute ici des mots supplémentaires : le mot et sa définition correcte suffisent, les fausses
-      définitions du quiz sont piochées automatiquement. Tes ajouts sont sauvegardés pour tes
-      prochaines sessions.
-    </p>
-
-    <div class="add-form">
-      <div>
-        <label for="f-word">Mot</label>
-        <input id="f-word" type="text" placeholder="ex. ABSCONS">
-      </div>
-      <div>
-        <label for="f-correct">Définition</label>
-        <input id="f-correct" type="text" placeholder="ex. difficile à comprendre">
-      </div>
-    </div>
-    <div class="panel-actions">
-      <button class="btn-secondary" id="add-word-btn">Ajouter ce mot</button>
-    </div>
-    <div class="msg" id="add-msg"></div>
-
-    <p class="hint" style="margin-top:22px;">
-      <strong>Coller une liste entière</strong> — colle directement le texte tel qu'il apparaît dans ton livre,
-      au format <code>MOT : définition - MOT : définition - ...</code>. L'analyse et l'import se font
-      entièrement dans ton navigateur ; les fausses définitions du quiz seront piochées automatiquement
-      parmi les autres définitions de ta liste.
-    </p>
-    <div class="add-form">
-      <textarea id="f-bulk" style="min-height:120px;" placeholder="ABERRANT : insensé - ABHORRER : avoir en horreur - ABNÉGATION : sacrifice de soi - ..."></textarea>
-    </div>
-    <div class="panel-actions">
-      <button class="btn-secondary" id="import-bulk-btn">Analyser et importer</button>
-      <button class="btn-danger" id="reset-btn">Effacer mes mots ajoutés</button>
-    </div>
-    <div class="msg" id="import-msg"></div>
-
-    <div class="wordlist-count" id="bank-count-detail"></div>
-
-    <div class="starter-toggle" style="margin-top:14px; display:flex; align-items:center; gap:10px;">
-      <input type="checkbox" id="include-starter-checkbox" style="width:16px; height:16px;">
-      <label for="include-starter-checkbox" style="font-family:'JetBrains Mono', monospace; font-size:12px; color: var(--ink-soft); cursor:pointer;">
-        Inclure les mots importés dans le quiz
-      </label>
-    </div>
-
-    <p class="hint" style="margin-top:22px;">
-      <strong>Exporter mes mots</strong> — un JSON de tous les mots que tu as toi-même ajoutés
-      (les mots de démarrage n'y figurent pas), à copier pour le sauvegarder ailleurs ou le réimporter plus tard.
-    </p>
-    <div class="panel-actions">
-      <button class="btn-secondary" id="export-json-btn">Afficher le JSON de mes mots</button>
-      <button class="btn-secondary" id="export-csv-btn">Exporter en CSV</button>
-      <button class="btn-secondary" id="copy-json-btn" style="display:none;">Copier</button>
-    </div>
-    <textarea id="export-output" readonly style="display:none; margin-top:10px; min-height:140px; font-family:'JetBrains Mono', monospace; font-size:11px;"></textarea>
-    <div class="msg" id="export-msg"></div>
-  </div>
 
 </div>
 
@@ -448,11 +270,6 @@
   const WORDS_JSON_URL = "words_list.json";
   let importedWords = [];
 
-  const STORAGE_KEY = "voltaire-quiz-custom-words";
-  const INCLUDE_STARTER_KEY = "voltaire-quiz-include-starter";
-
-  let customWords = [];
-  let includeStarter = true;
   let bank = [];
   let current = null;
   let score = 0, total = 0, streak = 0;
@@ -462,8 +279,6 @@
   const statScore = document.getElementById('stat-score');
   const statTotal = document.getElementById('stat-total');
   const statStreak = document.getElementById('stat-streak');
-  const statBank = document.getElementById('stat-bank');
-  const bankCountDetail = document.getElementById('bank-count-detail');
 
   function shuffle(arr) {
     const a = arr.slice();
@@ -475,12 +290,7 @@
   }
 
   function rebuildBank() {
-    bank = (includeStarter ? importedWords : []).concat(customWords);
-    statBank.textContent = bank.length;
-    const starterNote = includeStarter
-      ? `${importedWords.length} mot(s) importé(s) + `
-      : `mots importés exclus + `;
-    bankCountDetail.textContent = `Banque totale : ${starterNote}${customWords.length} mot(s) ajouté(s) par toi = ${bank.length} au total.`;
+    bank = importedWords;
   }
 
   function updateStats() {
@@ -490,7 +300,7 @@
   }
 
   function renderEmpty() {
-    quizArea.innerHTML = `<div class="card"><div class="empty-state">Il faut au moins 4 mots en banque pour générer un quiz (pour avoir de quoi fabriquer les fausses réponses). Ajoute-en via « Gérer ma liste de mots ».</div></div>`;
+    quizArea.innerHTML = `<div class="card"><div class="empty-state">Impossible de charger la liste de mots. Essaie de recharger la page.</div></div>`;
   }
 
   function newQuestion() {
@@ -584,14 +394,6 @@
     return div.innerHTML;
   }
 
-  // ---- Gestion du panneau et de la persistance ----
-  const panel = document.getElementById('panel');
-  const toggleBtn = document.getElementById('toggle-panel');
-  toggleBtn.addEventListener('click', () => {
-    panel.classList.toggle('open');
-    toggleBtn.textContent = panel.classList.contains('open') ? "Fermer" : "Gérer ma liste de mots";
-  });
-
   async function loadImportedWords() {
     try {
       const res = await fetch(WORDS_JSON_URL);
@@ -605,181 +407,9 @@
 
   async function init() {
     await loadImportedWords();
-    try {
-      const result = await window.storage.get(STORAGE_KEY, false);
-      if (result && result.value) {
-        customWords = JSON.parse(result.value);
-      }
-    } catch (e) {
-      customWords = [];
-    }
-    try {
-      const pref = await window.storage.get(INCLUDE_STARTER_KEY, false);
-      if (pref && pref.value !== undefined) {
-        includeStarter = pref.value === 'true';
-      }
-    } catch (e) {
-      includeStarter = true;
-    }
-    document.getElementById('include-starter-checkbox').checked = includeStarter;
     rebuildBank();
     newQuestion();
   }
-
-  async function saveCustomWords() {
-    try {
-      await window.storage.set(STORAGE_KEY, JSON.stringify(customWords), false);
-    } catch (e) {
-      console.error("Erreur de sauvegarde :", e);
-    }
-  }
-
-  document.getElementById('include-starter-checkbox').addEventListener('change', async (e) => {
-    includeStarter = e.target.checked;
-    try {
-      await window.storage.set(INCLUDE_STARTER_KEY, String(includeStarter), false);
-    } catch (err) {
-      console.error("Erreur de sauvegarde :", err);
-    }
-    rebuildBank();
-    newQuestion();
-  });
-
-  document.getElementById('export-json-btn').addEventListener('click', () => {
-    const output = document.getElementById('export-output');
-    const msg = document.getElementById('export-msg');
-    const copyBtn = document.getElementById('copy-json-btn');
-    if (customWords.length === 0) {
-      msg.textContent = "Tu n'as pas encore ajouté de mot toi-même.";
-      msg.className = "msg err";
-      output.style.display = 'none';
-      copyBtn.style.display = 'none';
-      return;
-    }
-    output.value = JSON.stringify(customWords, null, 2);
-    output.style.display = 'block';
-    copyBtn.style.display = 'inline-block';
-    msg.textContent = `${customWords.length} mot(s) affiché(s) ci-dessous.`;
-    msg.className = "msg ok";
-  });
-
-  document.getElementById('copy-json-btn').addEventListener('click', async () => {
-    const output = document.getElementById('export-output');
-    const msg = document.getElementById('export-msg');
-    try {
-      await navigator.clipboard.writeText(output.value);
-      msg.textContent = "Copié dans le presse-papier.";
-      msg.className = "msg ok";
-    } catch (e) {
-      output.select();
-      msg.textContent = "Sélectionne et copie manuellement (Ctrl/Cmd+C).";
-      msg.className = "msg err";
-    }
-  });
-
-  function csvEscape(value) {
-    const str = String(value);
-    if (/[",\n]/.test(str)) {
-      return '"' + str.replace(/"/g, '""') + '"';
-    }
-    return str;
-  }
-
-  document.getElementById('export-csv-btn').addEventListener('click', () => {
-    const msg = document.getElementById('export-msg');
-    if (customWords.length === 0) {
-      msg.textContent = "Tu n'as pas encore ajouté de mot toi-même.";
-      msg.className = "msg err";
-      return;
-    }
-    const rows = [['word', 'correct']];
-    customWords.forEach(w => rows.push([w.word, w.correct]));
-    const csvContent = rows.map(r => r.map(csvEscape).join(',')).join('\r\n');
-    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'mes-mots-vocabulaire.csv';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    msg.textContent = `${customWords.length} mot(s) exporté(s) en CSV.`;
-    msg.className = "msg ok";
-  });
-
-  function validEntry(entry) {
-    return entry && typeof entry.word === 'string' && entry.word.trim() &&
-      typeof entry.correct === 'string' && entry.correct.trim();
-  }
-
-  document.getElementById('add-word-btn').addEventListener('click', async () => {
-    const word = document.getElementById('f-word').value.trim().toUpperCase();
-    const correct = document.getElementById('f-correct').value.trim();
-    const msg = document.getElementById('add-msg');
-
-    const entry = { word, correct };
-    if (!validEntry(entry)) {
-      msg.textContent = "Merci de remplir le mot et sa définition.";
-      msg.className = "msg err";
-      return;
-    }
-    customWords.push(entry);
-    await saveCustomWords();
-    rebuildBank();
-    msg.textContent = `« ${word} » ajouté à ta banque.`;
-    msg.className = "msg ok";
-    ['f-word','f-correct'].forEach(id => document.getElementById(id).value = '');
-  });
-
-  // Analyse un texte au format "MOT : définition - MOT : définition - ..."
-  // (le format naturel d'une liste de vocabulaire recopiée depuis un livre).
-  // Tout se passe ici, dans le navigateur : aucune donnée n'est envoyée nulle part,
-  // et ce code ne contient lui-même aucun mot particulier.
-  function parseBulkList(raw) {
-    const cleaned = raw.replace(/\r/g, ' ').replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
-    const chunks = cleaned.split(/\s-\s+/);
-    const entries = [];
-    for (const chunk of chunks) {
-      const m = chunk.match(/^(.+?)\s*:\s*(.+)$/);
-      if (!m) continue;
-      const word = m[1].trim().toUpperCase();
-      const def = m[2].trim();
-      if (word && def) entries.push({ word, correct: def });
-    }
-    return entries;
-  }
-
-  document.getElementById('import-bulk-btn').addEventListener('click', async () => {
-    const raw = document.getElementById('f-bulk').value.trim();
-    const msg = document.getElementById('import-msg');
-    if (!raw) {
-      msg.textContent = "Colle d'abord ta liste dans le champ ci-dessus.";
-      msg.className = "msg err";
-      return;
-    }
-    const parsed = parseBulkList(raw);
-    if (parsed.length === 0) {
-      msg.textContent = "Aucune entrée reconnue. Vérifie le format : « MOT : définition - MOT : définition - ... ».";
-      msg.className = "msg err";
-      return;
-    }
-    customWords = customWords.concat(parsed);
-    await saveCustomWords();
-    rebuildBank();
-    msg.textContent = `${parsed.length} mot(s) analysé(s) et importé(s) avec succès.`;
-    msg.className = "msg ok";
-    document.getElementById('f-bulk').value = '';
-  });
-
-  document.getElementById('reset-btn').addEventListener('click', async () => {
-    if (!confirm("Effacer tous les mots que tu as ajoutés toi-même ? Le jeu de démarrage restera intact.")) return;
-    customWords = [];
-    await saveCustomWords();
-    rebuildBank();
-    document.getElementById('import-msg').textContent = "Tes mots ajoutés ont été effacés.";
-    document.getElementById('import-msg').className = "msg ok";
-  });
 
   init();
 
