@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QCU Vocabulaire — Entraînement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #f2ede2;
+    --paper-2: #e8e0cf;
+    --ink: #2a2420;
+    --ink-soft: #55483d;
+    --burgundy: #7a2e2e;
+    --burgundy-deep: #5c2222;
+    --gold: #a9812f;
+    --green: #3f6b3a;
+    --green-bg: #e3ecdd;
+    --red: #a13a2f;
+    --red-bg: #f3e0dc;
+    --rule: #c9bda3;
+    --radius: 3px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', serif;
+    min-height: 100vh;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 118px, rgba(169,129,47,0.05) 119px),
+      radial-gradient(ellipse at top left, rgba(122,46,46,0.04), transparent 60%);
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  header.masthead {
+    text-align: center;
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+  }
+
+  .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    margin-bottom: 6px;
+  }
+
+  h1.title {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 22px 0 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .stats-bar .stat b {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .stats-bar .stat { text-align: center; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .card {
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    position: relative;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 12px 30px -18px rgba(42,36,32,0.35);
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border: 1px solid rgba(122,46,46,0.15);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+
+  .qnum {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .word {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(30px, 6vw, 46px);
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    color: var(--burgundy-deep);
+  }
+
+  .instruction {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .option {
+    text-align: left;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 15px 18px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .option .letter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .option:hover:not(:disabled) {
+    border-color: var(--burgundy);
+    background: #fbf8ee;
+  }
+  .option:focus-visible {
+    outline: 2px solid var(--burgundy);
+    outline-offset: 2px;
+  }
+  .option:disabled { cursor: default; }
+
+  .option.correct {
+    background: var(--green-bg);
+    border-color: var(--green);
+    color: #2c4a28;
+  }
+  .option.correct .letter { color: var(--green); }
+
+  .option.incorrect {
+    background: var(--red-bg);
+    border-color: var(--red);
+    color: #6d2419;
+  }
+  .option.incorrect .letter { color: var(--red); }
+
+  .option.dimmed { opacity: 0.55; }
+
+  .feedback-row {
+    margin-top: 24px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .feedback-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  .feedback-text.ok { color: var(--green); }
+  .feedback-text.ko { color: var(--red); }
+
+  button.next {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--burgundy);
+    color: var(--paper);
+    border: none;
+    border-radius: var(--radius);
+    padding: 13px 24px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+  }
+  button.next:hover { background: var(--burgundy-deep); }
+  button.next:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  .toolbar {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+  }
+  .toolbar button {
+    background: none;
+    border: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .toolbar button:hover { color: var(--burgundy); }
+
+  .panel {
+    margin-top: 18px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    display: none;
+  }
+  .panel.open { display: block; }
+
+  .panel h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    margin: 0 0 6px;
+  }
+  .panel p.hint {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+    line-height: 1.5;
+  }
+  .panel code {
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(122,46,46,0.08);
+    padding: 1px 5px;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+
+  .add-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .add-form label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .add-form input, .add-form textarea {
+    width: 100%;
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    padding: 9px 11px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .add-form textarea { min-height: 60px; resize: vertical; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .add-form .row3 { display: grid; grid-template-columns: 1fr; gap: 8px; }
+
+  .panel-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+  .btn-secondary, .btn-danger {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    cursor: pointer;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .btn-secondary:hover { border-color: var(--burgundy); color: var(--burgundy); }
+  .btn-danger { border-color: var(--red); color: var(--red); background: var(--red-bg); }
+  .btn-danger:hover { background: #eccbc4; }
+
+  .wordlist-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--rule);
+  }
+
+  .msg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    margin-top: 10px;
+    min-height: 14px;
+  }
+  .msg.ok { color: var(--green); }
+  .msg.err { color: var(--red); }
+
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 28px 20px; }
+    .page { padding: 32px 14px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="kicker">Entraînement personnel</div>
+    <h1 class="title">Questionnaire de Vocabulaire</h1>
+    <div class="subtitle">— à choix unique · une définition parmi quatre —</div>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat"><b id="stat-score">0</b>Score</div>
+    <div class="stat"><b id="stat-total">0</b>Répondues</div>
+    <div class="stat"><b id="stat-streak">0</b>Série</div>
+    <div class="stat"><b id="stat-bank">0</b>Mots en banque</div>
+  </div>
+
+  <div id="quiz-area"></div>
+
+  <div class="toolbar">
+    <button id="toggle-panel">Gérer ma liste de mots</button>
+  </div>
+
+  <div class="panel" id="panel">
+    <h2>Ma liste de mots</h2>
+    <p class="hint">
+      Ajoute ici les mots de ta liste des 600 (tapés par toi-même) : le mot, sa définition correcte,
+      et trois fausses définitions plausibles. Ils s'ajoutent à la banque et sont sauvegardés
+      automatiquement pour tes prochaines sessions.
+    </p>
+
+    <div class="add-form">
+      <div>
+        <label for="f-word">Mot</label>
+        <input id="f-word" type="text" placeholder="ex. ABSCONS">
+      </div>
+      <div>
+        <label for="f-correct">Définition</label>
+        <input id="f-correct" type="text" placeholder="ex. difficile à comprendre">
+      </div>
+    </div>
+    <div class="panel-actions">
+      <button class="btn-secondary" id="add-word-btn">Ajouter ce mot</button>
+    </div>
+    <div class="msg" id="add-msg"></div>
+
+    <p class="hint" style="margin-top:22px;">
+      <strong>Coller une liste entière</strong> — colle directement le texte tel qu'il apparaît dans ton livre,
+      au format <code>MOT : définition - MOT : définition - ...</code>. L'analyse et l'import se font
+      entièrement dans ton navigateur ; les fausses définitions du quiz seront piochées automatiquement
+      parmi les autres définitions de ta liste.
+    </p>
+    <div class="add-form">
+      <textarea id="f-bulk" style="min-height:120px;" placeholder="ABERRANT : insensé - ABHORRER : avoir en horreur - ABNÉGATION : sacrifice de soi - ..."></textarea>
+    </div>
+    <div class="panel-actions">
+      <button class="btn-secondary" id="import-bulk-btn">Analyser et importer</button>
+      <button class="btn-danger" id="reset-btn">Effacer mes mots ajoutés</button>
+    </div>
+    <div class="msg" id="import-msg"></div>
+
+    <div class="wordlist-count" id="bank-count-detail"></div>
+
+    <div class="starter-toggle" style="margin-top:14px; display:flex; align-items:center; gap:10px;">
+      <input type="checkbox" id="include-starter-checkbox" style="width:16px; height:16px;">
+      <label for="include-starter-checkbox" style="font-family:'JetBrains Mono', monospace; font-size:12px; color: var(--ink-soft); cursor:pointer;">
+        Inclure les 30 mots de démarrage dans le quiz
+      </label>
+    </div>
+
+    <p class="hint" style="margin-top:22px;">
+      <strong>Exporter mes mots</strong> — un JSON de tous les mots que tu as toi-même ajoutés
+      (les mots de démarrage n'y figurent pas), à copier pour le sauvegarder ailleurs ou le réimporter plus tard.
+    </p>
+    <div class="panel-actions">
+      <button class="btn-secondary" id="export-json-btn">Afficher le JSON de mes mots</button>
+      <button class="btn-secondary" id="export-csv-btn">Exporter en CSV</button>
+      <button class="btn-secondary" id="copy-json-btn" style="display:none;">Copier</button>
+    </div>
+    <textarea id="export-output" readonly style="display:none; margin-top:10px; min-height:140px; font-family:'JetBrains Mono', monospace; font-size:11px;"></textarea>
+    <div class="msg" id="export-msg"></div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+
+  // ---- Jeu de mots de démarrage (rédigé par Claude, style Certificat Voltaire) ----
+  // Format simple : mot + définition. Les fausses définitions du quiz sont
+  // générées à la volée en piochant dans les autres définitions de la banque.
+  const STARTER_WORDS = [
+    { word: "ABSCONS", correct: "difficile à comprendre" },
+    { word: "ACRIMONIE", correct: "aigreur, mauvaise humeur dans le ton" },
+    { word: "AMBIGU", correct: "qui peut être compris de plusieurs façons" },
+    { word: "BÉNÉVOLE", correct: "qui agit sans être payé, par bonne volonté" },
+    { word: "CIRCONSPECT", correct: "prudent, qui réfléchit avant d'agir" },
+    { word: "DÉLÉTÈRE", correct: "nuisible, qui a un effet néfaste" },
+    { word: "ÉPHÉMÈRE", correct: "qui dure très peu de temps" },
+    { word: "FALLACIEUX", correct: "trompeur, qui induit en erreur" },
+    { word: "GARGANTUESQUE", correct: "énorme, démesuré" },
+    { word: "HERMÉTIQUE", correct: "impossible à comprendre ou à pénétrer" },
+    { word: "IMPÉCUNIEUX", correct: "qui manque d'argent" },
+    { word: "JUBILATOIRE", correct: "qui procure une grande joie" },
+    { word: "LACONIQUE", correct: "qui s'exprime en peu de mots" },
+    { word: "MITIGÉ", correct: "partagé, ni entièrement positif ni entièrement négatif" },
+    { word: "NÉBULEUX", correct: "confus, difficile à cerner" },
+    { word: "OBSÉQUIEUX", correct: "excessivement poli par flatterie intéressée" },
+    { word: "PROLIXE", correct: "qui parle ou écrit de façon excessivement longue" },
+    { word: "QUÉRULENT", correct: "qui se plaint et conteste sans cesse" },
+    { word: "RÉTICENT", correct: "qui hésite, montre de la réserve" },
+    { word: "SIBYLLIN", correct: "obscur, énigmatique" },
+    { word: "TACITURNE", correct: "qui parle peu, d'humeur silencieuse" },
+    { word: "UBIQUISTE", correct: "qui est présent partout à la fois" },
+    { word: "VÉNAL", correct: "qui se laisse corrompre par l'argent" },
+    { word: "ZÉLÉ", correct: "qui montre un empressement excessif dans son engagement" },
+    { word: "APOSTASIER", correct: "renier publiquement sa foi ou ses convictions" },
+    { word: "CACOPHONIE", correct: "mélange de sons discordants et désagréables" },
+    { word: "DIAPHANE", correct: "si fin qu'on peut voir au travers" },
+    { word: "ENJOINDRE", correct: "ordonner fermement de faire quelque chose" },
+    { word: "FASTIDIEUX", correct: "ennuyeux et long, qui demande un effort pénible" },
+    { word: "GRÉGAIRE", correct: "qui aime vivre en groupe, suit le comportement collectif" },
+  ];
+
+  const STORAGE_KEY = "voltaire-quiz-custom-words";
+  const INCLUDE_STARTER_KEY = "voltaire-quiz-include-starter";
+
+  let customWords = [];
+  let includeStarter = true;
+  let bank = [];
+  let current = null;
+  let score = 0, total = 0, streak = 0;
+  let answered = false;
+
+  const quizArea = document.getElementById('quiz-area');
+  const statScore = document.getElementById('stat-score');
+  const statTotal = document.getElementById('stat-total');
+  const statStreak = document.getElementById('stat-streak');
+  const statBank = document.getElementById('stat-bank');
+  const bankCountDetail = document.getElementById('bank-count-detail');
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function rebuildBank() {
+    bank = (includeStarter ? STARTER_WORDS : []).concat(customWords);
+    statBank.textContent = bank.length;
+    const starterNote = includeStarter
+      ? `${STARTER_WORDS.length} mot(s) de démarrage + `
+      : `mots de démarrage exclus + `;
+    bankCountDetail.textContent = `Banque totale : ${starterNote}${customWords.length} mot(s) ajouté(s) par toi = ${bank.length} au total.`;
+  }
+
+  function updateStats() {
+    statScore.textContent = score;
+    statTotal.textContent = total;
+    statStreak.textContent = streak;
+  }
+
+  function renderEmpty() {
+    quizArea.innerHTML = `<div class="card"><div class="empty-state">Il faut au moins 4 mots en banque pour générer un quiz (pour avoir de quoi fabriquer les fausses réponses). Ajoute-en via « Gérer ma liste de mots ».</div></div>`;
+  }
+
+  function newQuestion() {
+    if (bank.length < 4) { renderEmpty(); return; }
+    answered = false;
+    const item = bank[Math.floor(Math.random() * bank.length)];
+
+    // Génère 3 fausses définitions à la volée, piochées parmi les autres
+    // définitions de la banque (jamais stockées : recalculées à chaque question).
+    const pool = bank.filter(w => w.word !== item.word);
+    const wrongDefs = shuffle(pool).slice(0, 3).map(w => w.correct);
+
+    const options = shuffle([
+      { text: item.correct, correct: true },
+      ...wrongDefs.map(d => ({ text: d, correct: false }))
+    ]);
+    current = { item, options };
+    renderQuestion();
+  }
+
+  function renderQuestion() {
+    const letters = ['A', 'B', 'C', 'D'];
+    quizArea.innerHTML = `
+      <div class="card">
+        <div class="qnum">Question ${total + 1}</div>
+        <div class="word">${escapeHtml(current.item.word)}</div>
+        <div class="instruction">Quelle est la définition correcte de ce mot ?</div>
+        <div class="options" id="options-list">
+          ${current.options.map((o, i) => `
+            <button class="option" data-index="${i}">
+              <span class="letter">${letters[i]}</span>
+              <span>${escapeHtml(o.text)}</span>
+            </button>
+          `).join('')}
+        </div>
+        <div class="feedback-row">
+          <div class="feedback-text" id="feedback-text"></div>
+          <button class="next" id="next-btn" style="display:none;">Question suivante →</button>
+        </div>
+      </div>
+    `;
+    document.querySelectorAll('.option').forEach(btn => {
+      btn.addEventListener('click', onAnswer);
+    });
+    document.getElementById('next-btn').addEventListener('click', newQuestion);
+  }
+
+  function onAnswer(e) {
+    if (answered) return;
+    answered = true;
+    const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
+    const chosen = current.options[idx];
+    total++;
+
+    document.querySelectorAll('.option').forEach((btn, i) => {
+      btn.disabled = true;
+      const opt = current.options[i];
+      if (opt.correct) {
+        btn.classList.add('correct');
+      } else if (i === idx) {
+        btn.classList.add('incorrect');
+      } else {
+        btn.classList.add('dimmed');
+      }
+    });
+
+    const feedback = document.getElementById('feedback-text');
+    if (chosen.correct) {
+      score++;
+      streak++;
+      feedback.textContent = "✓ Exact.";
+      feedback.className = "feedback-text ok";
+    } else {
+      streak = 0;
+      feedback.textContent = "✗ Ce n'était pas la bonne définition — regarde celle en vert.";
+      feedback.className = "feedback-text ko";
+    }
+    document.getElementById('next-btn').style.display = 'inline-block';
+    updateStats();
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // ---- Gestion du panneau et de la persistance ----
+  const panel = document.getElementById('panel');
+  const toggleBtn = document.getElementById('toggle-panel');
+  toggleBtn.addEventListener('click', () => {
+    panel.classList.toggle('open');
+    toggleBtn.textContent = panel.classList.contains('open') ? "Fermer" : "Gérer ma liste de mots";
+  });
+
+  async function loadCustomWords() {
+    try {
+      const result = await window.storage.get(STORAGE_KEY, false);
+      if (result && result.value) {
+        customWords = JSON.parse(result.value);
+      }
+    } catch (e) {
+      customWords = [];
+    }
+    try {
+      const pref = await window.storage.get(INCLUDE_STARTER_KEY, false);
+      if (pref && pref.value !== undefined) {
+        includeStarter = pref.value === 'true';
+      }
+    } catch (e) {
+      includeStarter = true;
+    }
+    document.getElementById('include-starter-checkbox').checked = includeStarter;
+    rebuildBank();
+    newQuestion();
+  }
+
+  async function saveCustomWords() {
+    try {
+      await window.storage.set(STORAGE_KEY, JSON.stringify(customWords), false);
+    } catch (e) {
+      console.error("Erreur de sauvegarde :", e);
+    }
+  }
+
+  document.getElementById('include-starter-checkbox').addEventListener('change', async (e) => {
+    includeStarter = e.target.checked;
+    try {
+      await window.storage.set(INCLUDE_STARTER_KEY, String(includeStarter), false);
+    } catch (err) {
+      console.error("Erreur de sauvegarde :", err);
+    }
+    rebuildBank();
+    newQuestion();
+  });
+
+  document.getElementById('export-json-btn').addEventListener('click', () => {
+    const output = document.getElementById('export-output');
+    const msg = document.getElementById('export-msg');
+    const copyBtn = document.getElementById('copy-json-btn');
+    if (customWords.length === 0) {
+      msg.textContent = "Tu n'as pas encore ajouté de mot toi-même.";
+      msg.className = "msg err";
+      output.style.display = 'none';
+      copyBtn.style.display = 'none';
+      return;
+    }
+    output.value = JSON.stringify(customWords, null, 2);
+    output.style.display = 'block';
+    copyBtn.style.display = 'inline-block';
+    msg.textContent = `${customWords.length} mot(s) affiché(s) ci-dessous.`;
+    msg.className = "msg ok";
+  });
+
+  document.getElementById('copy-json-btn').addEventListener('click', async () => {
+    const output = document.getElementById('export-output');
+    const msg = document.getElementById('export-msg');
+    try {
+      await navigator.clipboard.writeText(output.value);
+      msg.textContent = "Copié dans le presse-papier.";
+      msg.className = "msg ok";
+    } catch (e) {
+      output.select();
+      msg.textContent = "Sélectionne et copie manuellement (Ctrl/Cmd+C).";
+      msg.className = "msg err";
+    }
+  });
+
+  function csvEscape(value) {
+    const str = String(value);
+    if (/[",\n]/.test(str)) {
+      return '"' + str.replace(/"/g, '""') + '"';
+    }
+    return str;
+  }
+
+  document.getElementById('export-csv-btn').addEventListener('click', () => {
+    const msg = document.getElementById('export-msg');
+    if (customWords.length === 0) {
+      msg.textContent = "Tu n'as pas encore ajouté de mot toi-même.";
+      msg.className = "msg err";
+      return;
+    }
+    const rows = [['word', 'correct']];
+    customWords.forEach(w => rows.push([w.word, w.correct]));
+    const csvContent = rows.map(r => r.map(csvEscape).join(',')).join('\r\n');
+    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'mes-mots-vocabulaire.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    msg.textContent = `${customWords.length} mot(s) exporté(s) en CSV.`;
+    msg.className = "msg ok";
+  });
+
+  function validEntry(entry) {
+    return entry && typeof entry.word === 'string' && entry.word.trim() &&
+      typeof entry.correct === 'string' && entry.correct.trim();
+  }
+
+  document.getElementById('add-word-btn').addEventListener('click', async () => {
+    const word = document.getElementById('f-word').value.trim().toUpperCase();
+    const correct = document.getElementById('f-correct').value.trim();
+    const msg = document.getElementById('add-msg');
+
+    const entry = { word, correct };
+    if (!validEntry(entry)) {
+      msg.textContent = "Merci de remplir le mot et sa définition.";
+      msg.className = "msg err";
+      return;
+    }
+    customWords.push(entry);
+    await saveCustomWords();
+    rebuildBank();
+    msg.textContent = `« ${word} » ajouté à ta banque.`;
+    msg.className = "msg ok";
+    ['f-word','f-correct'].forEach(id => document.getElementById(id).value = '');
+  });
+
+  // Analyse un texte au format "MOT : définition - MOT : définition - ..."
+  // (le format naturel d'une liste de vocabulaire recopiée depuis un livre).
+  // Tout se passe ici, dans le navigateur : aucune donnée n'est envoyée nulle part,
+  // et ce code ne contient lui-même aucun mot particulier.
+  function parseBulkList(raw) {
+    const cleaned = raw.replace(/\r/g, ' ').replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+    const chunks = cleaned.split(/\s-\s+/);
+    const entries = [];
+    for (const chunk of chunks) {
+      const m = chunk.match(/^(.+?)\s*:\s*(.+)$/);
+      if (!m) continue;
+      const word = m[1].trim().toUpperCase();
+      const def = m[2].trim();
+      if (word && def) entries.push({ word, correct: def });
+    }
+    return entries;
+  }
+
+  document.getElementById('import-bulk-btn').addEventListener('click', async () => {
+    const raw = document.getElementById('f-bulk').value.trim();
+    const msg = document.getElementById('import-msg');
+    if (!raw) {
+      msg.textContent = "Colle d'abord ta liste dans le champ ci-dessus.";
+      msg.className = "msg err";
+      return;
+    }
+    const parsed = parseBulkList(raw);
+    if (parsed.length === 0) {
+      msg.textContent = "Aucune entrée reconnue. Vérifie le format : « MOT : définition - MOT : définition - ... ».";
+      msg.className = "msg err";
+      return;
+    }
+    customWords = customWords.concat(parsed);
+    await saveCustomWords();
+    rebuildBank();
+    msg.textContent = `${parsed.length} mot(s) analysé(s) et importé(s) avec succès.`;
+    msg.className = "msg ok";
+    document.getElementById('f-bulk').value = '';
+  });
+
+  document.getElementById('reset-btn').addEventListener('click', async () => {
+    if (!confirm("Effacer tous les mots que tu as ajoutés toi-même ? Le jeu de démarrage restera intact.")) return;
+    customWords = [];
+    await saveCustomWords();
+    rebuildBank();
+    document.getElementById('import-msg').textContent = "Tes mots ajoutés ont été effacés.";
+    document.getElementById('import-msg').className = "msg ok";
+  });
+
+  loadCustomWords();
+
+})();
+</script>
+
+</body>
+</html>
