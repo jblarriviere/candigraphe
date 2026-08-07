@@ -378,9 +378,10 @@
   <div class="panel" id="panel">
     <h2>Ma liste de mots</h2>
     <p class="hint">
-      Ajoute ici les mots de ta liste des 600 (tapés par toi-même) : le mot, sa définition correcte,
-      et trois fausses définitions plausibles. Ils s'ajoutent à la banque et sont sauvegardés
-      automatiquement pour tes prochaines sessions.
+      La banque de base est chargée automatiquement.
+      Ajoute ici des mots supplémentaires : le mot et sa définition correcte suffisent, les fausses
+      définitions du quiz sont piochées automatiquement. Tes ajouts sont sauvegardés pour tes
+      prochaines sessions.
     </p>
 
     <div class="add-form">
@@ -418,7 +419,7 @@
     <div class="starter-toggle" style="margin-top:14px; display:flex; align-items:center; gap:10px;">
       <input type="checkbox" id="include-starter-checkbox" style="width:16px; height:16px;">
       <label for="include-starter-checkbox" style="font-family:'JetBrains Mono', monospace; font-size:12px; color: var(--ink-soft); cursor:pointer;">
-        Inclure les 30 mots de démarrage dans le quiz
+        Inclure les mots importés dans le quiz
       </label>
     </div>
 
@@ -440,41 +441,12 @@
 <script>
 (function(){
 
-  // ---- Jeu de mots de démarrage (rédigé par Claude, style Certificat Voltaire) ----
-  // Format simple : mot + définition. Les fausses définitions du quiz sont
-  // générées à la volée en piochant dans les autres définitions de la banque.
-  const STARTER_WORDS = [
-    { word: "ABSCONS", correct: "difficile à comprendre" },
-    { word: "ACRIMONIE", correct: "aigreur, mauvaise humeur dans le ton" },
-    { word: "AMBIGU", correct: "qui peut être compris de plusieurs façons" },
-    { word: "BÉNÉVOLE", correct: "qui agit sans être payé, par bonne volonté" },
-    { word: "CIRCONSPECT", correct: "prudent, qui réfléchit avant d'agir" },
-    { word: "DÉLÉTÈRE", correct: "nuisible, qui a un effet néfaste" },
-    { word: "ÉPHÉMÈRE", correct: "qui dure très peu de temps" },
-    { word: "FALLACIEUX", correct: "trompeur, qui induit en erreur" },
-    { word: "GARGANTUESQUE", correct: "énorme, démesuré" },
-    { word: "HERMÉTIQUE", correct: "impossible à comprendre ou à pénétrer" },
-    { word: "IMPÉCUNIEUX", correct: "qui manque d'argent" },
-    { word: "JUBILATOIRE", correct: "qui procure une grande joie" },
-    { word: "LACONIQUE", correct: "qui s'exprime en peu de mots" },
-    { word: "MITIGÉ", correct: "partagé, ni entièrement positif ni entièrement négatif" },
-    { word: "NÉBULEUX", correct: "confus, difficile à cerner" },
-    { word: "OBSÉQUIEUX", correct: "excessivement poli par flatterie intéressée" },
-    { word: "PROLIXE", correct: "qui parle ou écrit de façon excessivement longue" },
-    { word: "QUÉRULENT", correct: "qui se plaint et conteste sans cesse" },
-    { word: "RÉTICENT", correct: "qui hésite, montre de la réserve" },
-    { word: "SIBYLLIN", correct: "obscur, énigmatique" },
-    { word: "TACITURNE", correct: "qui parle peu, d'humeur silencieuse" },
-    { word: "UBIQUISTE", correct: "qui est présent partout à la fois" },
-    { word: "VÉNAL", correct: "qui se laisse corrompre par l'argent" },
-    { word: "ZÉLÉ", correct: "qui montre un empressement excessif dans son engagement" },
-    { word: "APOSTASIER", correct: "renier publiquement sa foi ou ses convictions" },
-    { word: "CACOPHONIE", correct: "mélange de sons discordants et désagréables" },
-    { word: "DIAPHANE", correct: "si fin qu'on peut voir au travers" },
-    { word: "ENJOINDRE", correct: "ordonner fermement de faire quelque chose" },
-    { word: "FASTIDIEUX", correct: "ennuyeux et long, qui demande un effort pénible" },
-    { word: "GRÉGAIRE", correct: "qui aime vivre en groupe, suit le comportement collectif" },
-  ];
+  // ---- Banque de mots importée depuis words_list.json ----
+  // Chaque mot porte un "type" (nom / adjectif / adverbe / verbe) : les fausses
+  // définitions du quiz sont piochées en priorité parmi les mots de même type,
+  // pour éviter qu'on élimine une réponse juste parce qu'elle est du mauvais genre.
+  const WORDS_JSON_URL = "words_list.json";
+  let importedWords = [];
 
   const STORAGE_KEY = "voltaire-quiz-custom-words";
   const INCLUDE_STARTER_KEY = "voltaire-quiz-include-starter";
@@ -503,11 +475,11 @@
   }
 
   function rebuildBank() {
-    bank = (includeStarter ? STARTER_WORDS : []).concat(customWords);
+    bank = (includeStarter ? importedWords : []).concat(customWords);
     statBank.textContent = bank.length;
     const starterNote = includeStarter
-      ? `${STARTER_WORDS.length} mot(s) de démarrage + `
-      : `mots de démarrage exclus + `;
+      ? `${importedWords.length} mot(s) importé(s) + `
+      : `mots importés exclus + `;
     bankCountDetail.textContent = `Banque totale : ${starterNote}${customWords.length} mot(s) ajouté(s) par toi = ${bank.length} au total.`;
   }
 
@@ -614,7 +586,19 @@
     toggleBtn.textContent = panel.classList.contains('open') ? "Fermer" : "Gérer ma liste de mots";
   });
 
-  async function loadCustomWords() {
+  async function loadImportedWords() {
+    try {
+      const res = await fetch(WORDS_JSON_URL);
+      const json = await res.json();
+      importedWords = json.data || [];
+    } catch (e) {
+      console.error("Impossible de charger words_list.json :", e);
+      importedWords = [];
+    }
+  }
+
+  async function init() {
+    await loadImportedWords();
     try {
       const result = await window.storage.get(STORAGE_KEY, false);
       if (result && result.value) {
@@ -791,7 +775,7 @@
     document.getElementById('import-msg').className = "msg ok";
   });
 
-  loadCustomWords();
+  init();
 
 })();
 </script>
