@@ -500,8 +500,14 @@
 
     // Génère 3 fausses définitions à la volée, piochées parmi les autres
     // définitions de la banque (jamais stockées : recalculées à chaque question).
+    // On préfère piocher parmi les mots de même type grammatical (nom/adjectif/
+    // adverbe/verbe) pour ne pas trahir la réponse par élimination de genre ;
+    // si la banque n'en contient pas assez (mot sans type, petite banque), on
+    // retombe sur l'ensemble de la banque comme avant.
     const pool = bank.filter(w => w.word !== item.word);
-    const wrongDefs = shuffle(pool).slice(0, 3).map(w => w.correct);
+    const sameTypePool = item.type ? pool.filter(w => w.type === item.type) : [];
+    const distractorPool = sameTypePool.length >= 3 ? sameTypePool : pool;
+    const wrongDefs = shuffle(distractorPool).slice(0, 3).map(w => w.correct);
 
     const options = shuffle([
       { text: item.correct, correct: true },
