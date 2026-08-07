@@ -236,6 +236,12 @@
 
   .control-group {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .control-group-header {
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px 14px;
@@ -248,6 +254,26 @@
     text-transform: uppercase;
     color: var(--ink-soft);
   }
+
+  .control-actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .control-action {
+    background: none;
+    border: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    padding: 2px;
+  }
+  .control-action:hover { color: var(--burgundy); }
 
   .pill-group {
     display: flex;
@@ -315,13 +341,25 @@
 
   <div class="controls-panel" id="controls-panel">
     <div class="control-group" data-control="type">
-      <span class="control-label">Type de mot</span>
+      <div class="control-group-header">
+        <span class="control-label">Type de mot</span>
+      </div>
       <div class="pill-group" id="type-filter-group">
         <label class="pill"><input type="checkbox" value="nom" checked><span>Nom</span></label>
         <label class="pill"><input type="checkbox" value="adjectif" checked><span>Adjectif</span></label>
         <label class="pill"><input type="checkbox" value="adverbe" checked><span>Adverbe</span></label>
         <label class="pill"><input type="checkbox" value="verbe" checked><span>Verbe</span></label>
       </div>
+    </div>
+    <div class="control-group" data-control="letter">
+      <div class="control-group-header">
+        <span class="control-label">Lettre initiale</span>
+        <div class="control-actions">
+          <button type="button" class="control-action" id="letter-select-all">Tout sélectionner</button>
+          <button type="button" class="control-action" id="letter-select-none">Tout désélectionner</button>
+        </div>
+      </div>
+      <div class="pill-group" id="letter-filter-group"></div>
     </div>
   </div>
 
@@ -347,10 +385,17 @@
   // ---- Contrôles ----
   // État des filtres actifs. Pensé pour accueillir d'autres contrôles plus tard :
   // chaque groupe de contrôle a sa propre entrée ici, et rebuildBank() applique
-  // tous les filtres actifs les uns après les autres.
+  // tous les filtres actifs les uns après les autres. Un filtre vide exclut tout
+  // (rebuildBank produira une banque vide, géré par renderEmpty).
   const filters = {
     types: new Set(['nom', 'adjectif', 'adverbe', 'verbe']),
+    letters: new Set(), // rempli dynamiquement une fois les mots chargés
   };
+
+  // Lettre initiale normalisée (sans accent) d'un mot, ex. "ÉPARS" -> "E".
+  function startingLetter(word) {
+    return word.normalize('NFD').replace(/[\u0300-\u036f]/g, '')[0].toUpperCase();
+  }
 
   const quizArea = document.getElementById('quiz-area');
   const statScore = document.getElementById('stat-score');
@@ -367,7 +412,9 @@
   }
 
   function rebuildBank() {
-    bank = importedWords.filter(w => filters.types.has(w.type));
+    bank = importedWords.filter(w =>
+      filters.types.has(w.type) && filters.letters.has(startingLetter(w.word))
+    );
   }
 
   function updateStats() {
@@ -379,7 +426,7 @@
   function renderEmpty() {
     const message = importedWords.length === 0
       ? "Impossible de charger la liste de mots. Essaie de recharger la page."
-      : "Pas assez de mots pour ces filtres. Sélectionne d'autres types.";
+      : "Pas assez de mots pour ces filtres. Essaie d'en sélectionner d'autres.";
     quizArea.innerHTML = `<div class="card"><div class="empty-state">${message}</div></div>`;
   }
 
@@ -474,25 +521,65 @@
     return div.innerHTML;
   }
 
-  // ---- Groupe de contrôle : type de mot ----
-  // Chaque case à cocher pilote filters.types. On refuse de tout décocher
-  // (il faut au moins un type sélectionné) pour ne jamais vider la banque.
-  document.querySelectorAll('#type-filter-group .pill input').forEach(input => {
-    input.closest('.pill').classList.toggle('active', input.checked);
-    input.addEventListener('change', () => {
-      if (input.checked) {
-        filters.types.add(input.value);
-      } else if (filters.types.size > 1) {
-        filters.types.delete(input.value);
-      } else {
-        input.checked = true;
-        return;
-      }
+  // ---- Câblage générique des groupes de contrôle (pills à cocher) ----
+  // Chaque groupe pilote un Set de filters. Un groupe vide n'est pas empêché :
+  // rebuildBank() donnera alors une banque vide, et renderEmpty() l'explique.
+  function setupToggleGroup(containerEl, selectedSet, onChange) {
+    containerEl.querySelectorAll('.pill input').forEach(input => {
       input.closest('.pill').classList.toggle('active', input.checked);
+      input.addEventListener('change', () => {
+        if (input.checked) selectedSet.add(input.value);
+        else selectedSet.delete(input.value);
+        input.closest('.pill').classList.toggle('active', input.checked);
+        onChange();
+      });
+    });
+  }
+
+  function setAllPills(containerEl, selectedSet, allValues, selected) {
+    selectedSet.clear();
+    if (selected) allValues.forEach(v => selectedSet.add(v));
+    containerEl.querySelectorAll('.pill').forEach(pill => {
+      const input = pill.querySelector('input');
+      input.checked = selected;
+      pill.classList.toggle('active', selected);
+    });
+  }
+
+  // ---- Groupe de contrôle : type de mot ----
+  setupToggleGroup(document.getElementById('type-filter-group'), filters.types, () => {
+    rebuildBank();
+    newQuestion();
+  });
+
+  // ---- Groupe de contrôle : lettre initiale ----
+  // Construit dynamiquement une fois les mots chargés, une pill par lettre
+  // effectivement présente dans la banque (pas de pill morte pour W, X...).
+  function setupLetterFilter() {
+    const letters = [...new Set(importedWords.map(w => startingLetter(w.word)))].sort();
+    filters.letters = new Set(letters);
+
+    const group = document.getElementById('letter-filter-group');
+    group.innerHTML = letters.map(l =>
+      `<label class="pill"><input type="checkbox" value="${l}" checked><span>${l}</span></label>`
+    ).join('');
+
+    setupToggleGroup(group, filters.letters, () => {
       rebuildBank();
       newQuestion();
     });
-  });
+
+    document.getElementById('letter-select-all').addEventListener('click', () => {
+      setAllPills(group, filters.letters, letters, true);
+      rebuildBank();
+      newQuestion();
+    });
+    document.getElementById('letter-select-none').addEventListener('click', () => {
+      setAllPills(group, filters.letters, letters, false);
+      rebuildBank();
+      newQuestion();
+    });
+  }
 
   async function loadImportedWords() {
     try {
@@ -507,6 +594,7 @@
 
   async function init() {
     await loadImportedWords();
+    setupLetterFilter();
     rebuildBank();
     newQuestion();
   }
