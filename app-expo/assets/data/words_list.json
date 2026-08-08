@@ -1,0 +1,2999 @@
+{
+  "data": [
+    {
+      "word": "A FORTIORI",
+      "type": "nom",
+      "correct": "à plus forte raison"
+    },
+    {
+      "word": "À L'ENVI",
+      "type": "nom",
+      "correct": "en rivalisant les uns avec les autres"
+    },
+    {
+      "word": "ABERRANT",
+      "type": "adjectif",
+      "correct": "insensé"
+    },
+    {
+      "word": "ABHORRER",
+      "type": "verbe",
+      "correct": "avoir en horreur"
+    },
+    {
+      "word": "ABNÉGATION",
+      "type": "nom",
+      "correct": "sacrifice de soi"
+    },
+    {
+      "word": "ABONDER",
+      "type": "verbe",
+      "correct": "être tout à fait d'accord"
+    },
+    {
+      "word": "ABROGER",
+      "type": "verbe",
+      "correct": "supprimer"
+    },
+    {
+      "word": "ABSCONS",
+      "type": "adjectif",
+      "correct": "difficile à comprendre"
+    },
+    {
+      "word": "ABSOUDRE",
+      "type": "verbe",
+      "correct": "pardonner"
+    },
+    {
+      "word": "ABYSSAL",
+      "type": "adjectif",
+      "correct": "immense"
+    },
+    {
+      "word": "ACCEPTION",
+      "type": "nom",
+      "correct": "sens d'un mot"
+    },
+    {
+      "word": "ACCROÎTRE",
+      "type": "verbe",
+      "correct": "augmenter"
+    },
+    {
+      "word": "ACCULER",
+      "type": "verbe",
+      "correct": "forcer"
+    },
+    {
+      "word": "ACHOPPER",
+      "type": "verbe",
+      "correct": "se heurter à une difficulté"
+    },
+    {
+      "word": "ACMÉ",
+      "type": "nom",
+      "correct": "point le plus élevé"
+    },
+    {
+      "word": "ACRIMONIE",
+      "type": "nom",
+      "correct": "mauvaise humeur"
+    },
+    {
+      "word": "AD HOC",
+      "type": "nom",
+      "correct": "parfaitement adapté"
+    },
+    {
+      "word": "ADJACENT",
+      "type": "adjectif",
+      "correct": "voisin"
+    },
+    {
+      "word": "ADOUBER",
+      "type": "verbe",
+      "correct": "reconnaître la valeur"
+    },
+    {
+      "word": "AFFÉRENT",
+      "type": "adjectif",
+      "correct": "qui est lié"
+    },
+    {
+      "word": "AFFILIÉ",
+      "type": "adjectif",
+      "correct": "rattaché à un groupement"
+    },
+    {
+      "word": "AFFLIGEANT",
+      "type": "adjectif",
+      "correct": "lamentable"
+    },
+    {
+      "word": "AGENCER",
+      "type": "verbe",
+      "correct": "disposer"
+    },
+    {
+      "word": "AGRÉGER",
+      "type": "verbe",
+      "correct": "rattacher"
+    },
+    {
+      "word": "AGUERRI",
+      "type": "adjectif",
+      "correct": "qui sait faire face aux difficultés"
+    },
+    {
+      "word": "AJOURNER",
+      "type": "verbe",
+      "correct": "renvoyer à un autre moment"
+    },
+    {
+      "word": "ALACRITÉ",
+      "type": "nom",
+      "correct": "gaieté"
+    },
+    {
+      "word": "ALCHIMIE",
+      "type": "nom",
+      "correct": "transformation presque miraculeuse"
+    },
+    {
+      "word": "ALÉATOIRE",
+      "type": "adjectif",
+      "correct": "incertain"
+    },
+    {
+      "word": "ALINÉA",
+      "type": "nom",
+      "correct": "paragraphe"
+    },
+    {
+      "word": "ALLÉGATION",
+      "type": "nom",
+      "correct": "ce que l'on affirme"
+    },
+    {
+      "word": "ALLOCUTION",
+      "type": "nom",
+      "correct": "bref discours"
+    },
+    {
+      "word": "ALTÉRER",
+      "type": "verbe",
+      "correct": "changer en mal"
+    },
+    {
+      "word": "ALTRUISME",
+      "type": "nom",
+      "correct": "générosité"
+    },
+    {
+      "word": "AMALGAME",
+      "type": "nom",
+      "correct": "mélange d'éléments très différents"
+    },
+    {
+      "word": "AMBIGU",
+      "type": "adjectif",
+      "correct": "que l'on peut comprendre de diverses façons"
+    },
+    {
+      "word": "AMBIVALENCE",
+      "type": "nom",
+      "correct": "caractère de ce qui présente un double aspect"
+    },
+    {
+      "word": "AMENDER",
+      "type": "verbe",
+      "correct": "améliorer"
+    },
+    {
+      "word": "AMÈNE",
+      "type": "adjectif",
+      "correct": "aimable"
+    },
+    {
+      "word": "ANALOGUE",
+      "type": "adjectif",
+      "correct": "semblable"
+    },
+    {
+      "word": "ANNIHILER",
+      "type": "verbe",
+      "correct": "détruire"
+    },
+    {
+      "word": "ANTAGONISME",
+      "type": "nom",
+      "correct": "opposition"
+    },
+    {
+      "word": "ANTÉPÉNULTIÈME",
+      "type": "adjectif",
+      "correct": "juste avant l'avant-dernier"
+    },
+    {
+      "word": "ANTINOMIE",
+      "type": "nom",
+      "correct": "contradiction"
+    },
+    {
+      "word": "ANTIPODE",
+      "type": "adjectif",
+      "correct": "opposé"
+    },
+    {
+      "word": "APANAGE",
+      "type": "nom",
+      "correct": "privilège dont on bénéficie"
+    },
+    {
+      "word": "APOLOGIE",
+      "type": "nom",
+      "correct": "commentaire visant à prendre la défense"
+    },
+    {
+      "word": "APPROBATION",
+      "type": "nom",
+      "correct": "accord"
+    },
+    {
+      "word": "ARBITRAIREMENT",
+      "type": "adverbe",
+      "correct": "sans tenir compte d'autres forme d’avis"
+    },
+    {
+      "word": "ARCANES",
+      "type": "nom",
+      "correct": "mystères"
+    },
+    {
+      "word": "ARCHAÏQUE",
+      "type": "adjectif",
+      "correct": "qui n'est plus en usage"
+    },
+    {
+      "word": "ARBORER",
+      "type": "verbe",
+      "correct": "montrer ouvertement"
+    },
+    {
+      "word": "ARBORESCENCE",
+      "type": "nom",
+      "correct": "schema en forme d’arbre"
+    },
+    {
+      "word": "ARCHÉTYPE",
+      "type": "nom",
+      "correct": "modèle original"
+    },
+    {
+      "word": "ARÉOPAGE",
+      "type": "nom",
+      "correct": "assemblée de personnes compétentes"
+    },
+    {
+      "word": "ARGUER",
+      "type": "verbe",
+      "correct": "prétexter"
+    },
+    {
+      "word": "ARRIVISTE",
+      "type": "nom",
+      "correct": "personne prête à tout pour réussir"
+    },
+    {
+      "word": "ASSENTIMENT",
+      "type": "nom",
+      "correct": "accord"
+    },
+    {
+      "word": "ASSIGNER",
+      "type": "verbe",
+      "correct": "attribuer"
+    },
+    {
+      "word": "ASSUJETTISSEMENT",
+      "type": "nom",
+      "correct": "fait d'être forcé"
+    },
+    {
+      "word": "ATERMOYER",
+      "type": "verbe",
+      "correct": "chercher à gagner du temps"
+    },
+    {
+      "word": "ATYPIQUE",
+      "type": "adjectif",
+      "correct": "inhabituel"
+    },
+    {
+      "word": "AUGURE",
+      "type": "nom",
+      "correct": "signe qui annonce quelque chose"
+    },
+    {
+      "word": "AUSTÈRE",
+      "type": "adjectif",
+      "correct": "froid et triste"
+    },
+    {
+      "word": "AUTARCIE",
+      "type": "nom",
+      "correct": "absence d'échanges avec l'extérieur"
+    },
+    {
+      "word": "AUTODIDACTE",
+      "type": "nom",
+      "correct": "personne qui s'est formée seule"
+    },
+    {
+      "word": "AUTONOME",
+      "type": "adjectif",
+      "correct": "indépendant"
+    },
+    {
+      "word": "AVALISER",
+      "type": "verbe",
+      "correct": "accorder son appui"
+    },
+    {
+      "word": "AVANIE",
+      "type": "nom",
+      "correct": "humiliation"
+    },
+    {
+      "word": "AVEC PARCIMONIE",
+      "type": "nom",
+      "correct": "en petite quantité"
+    },
+    {
+      "word": "AVENANT",
+      "type": "nom",
+      "correct": "modification"
+    },
+    {
+      "word": "AVÈNEMENT",
+      "type": "nom",
+      "correct": "arrivée"
+    },
+    {
+      "word": "AVÉRÉ",
+      "type": "adjectif",
+      "correct": "certain"
+    },
+    {
+      "word": "AVERSION",
+      "type": "nom",
+      "correct": "haine"
+    },
+    {
+      "word": "AYANT DROIT",
+      "type": "nom",
+      "correct": "bénéficiaire"
+    },
+    {
+      "word": "BÉANT",
+      "type": "adjectif",
+      "correct": "grand ouvert"
+    },
+    {
+      "word": "BIENSEANCE",
+      "type": "nom",
+      "correct": "politesse"
+    },
+    {
+      "word": "BIENVEILLANCE",
+      "type": "nom",
+      "correct": "gentillesse"
+    },
+    {
+      "word": "BINAIRE",
+      "type": "adjectif",
+      "correct": "qui se limite à deux éléments"
+    },
+    {
+      "word": "BLÂMER",
+      "type": "verbe",
+      "correct": "condamner"
+    },
+    {
+      "word": "CADUC",
+      "type": "adjectif",
+      "correct": "dépassé"
+    },
+    {
+      "word": "CANDEUR",
+      "type": "nom",
+      "correct": "innocence"
+    },
+    {
+      "word": "CARENCE",
+      "type": "nom",
+      "correct": "insuffisance"
+    },
+    {
+      "word": "CARITATIF",
+      "type": "adjectif",
+      "correct": "qui vient en aide aux plus défavorisés"
+    },
+    {
+      "word": "CARTÉSIEN",
+      "type": "adjectif",
+      "correct": "logique"
+    },
+    {
+      "word": "CASUS BELLI",
+      "type": "nom",
+      "correct": "acte pouvant conduire à la guerre"
+    },
+    {
+      "word": "CAUTIONNER",
+      "type": "verbe",
+      "correct": "soutenir"
+    },
+    {
+      "word": "CELERITE",
+      "type": "nom",
+      "correct": "rapidité dans l'exécution d'une action"
+    },
+    {
+      "word": "CHARISME",
+      "type": "nom",
+      "correct": "qualité d'une personnalité fascinante"
+    },
+    {
+      "word": "CHARTE",
+      "type": "nom",
+      "correct": "liste de points que l'on s'engage à respecter"
+    },
+    {
+      "word": "CHRONIQUE",
+      "type": "adjectif",
+      "correct": "qui dure"
+    },
+    {
+      "word": "CINÉMATIQUE",
+      "type": "nom",
+      "correct": "enchaînement des mouvements"
+    },
+    {
+      "word": "CIRCONSCRIRE",
+      "type": "verbe",
+      "correct": "délimiter"
+    },
+    {
+      "word": "CIRCONSPECT",
+      "type": "adjectif",
+      "correct": "prudent"
+    },
+    {
+      "word": "CIRCULAIRE",
+      "type": "nom",
+      "correct": "lettre"
+    },
+    {
+      "word": "CLAUSE",
+      "type": "nom",
+      "correct": "disposition particulière dans un contrat ou une loi"
+    },
+    {
+      "word": "CLIVANT",
+      "type": "adjectif",
+      "correct": "qui divise profondément un groupe"
+    },
+    {
+      "word": "COALITION",
+      "type": "nom",
+      "correct": "alliance"
+    },
+    {
+      "word": "COERCITIF",
+      "type": "adjectif",
+      "correct": "contraignant"
+    },
+    {
+      "word": "COHESION",
+      "type": "nom",
+      "correct": "union"
+    },
+    {
+      "word": "COLLÉGIALEMENT",
+      "type": "adverbe",
+      "correct": "de manière collective"
+    },
+    {
+      "word": "COLLUSION",
+      "type": "nom",
+      "correct": "accord secret"
+    },
+    {
+      "word": "COMMINATOIRE",
+      "type": "adjectif",
+      "correct": "menaçant"
+    },
+    {
+      "word": "COMPÉTITIF",
+      "type": "adjectif",
+      "correct": "capable de faire face à la concurrence"
+    },
+    {
+      "word": "COMPULSER",
+      "type": "verbe",
+      "correct": "consulter un écrit"
+    },
+    {
+      "word": "COMPULSIVEMENT",
+      "type": "adverbe",
+      "correct": "sans que l'on puisse s'en empêcher"
+    },
+    {
+      "word": "CONCÉDER",
+      "type": "verbe",
+      "correct": "admettre le point de vue de quelqu'un"
+    },
+    {
+      "word": "CONCILIER",
+      "type": "verbe",
+      "correct": "rendre des choses compatibles"
+    },
+    {
+      "word": "CONCIS",
+      "type": "adjectif",
+      "correct": "qui dit beaucoup de choses en peu de mots"
+    },
+    {
+      "word": "CONCOMITAMMENT",
+      "type": "adverbe",
+      "correct": "en même temps"
+    },
+    {
+      "word": "CONCOURIR",
+      "type": "verbe",
+      "correct": "contribuer"
+    },
+    {
+      "word": "CONDESCENDANT",
+      "type": "adjectif",
+      "correct": "méprisant"
+    },
+    {
+      "word": "CONGLOMÉRAT",
+      "type": "nom",
+      "correct": "groupe d'enteprises"
+    },
+    {
+      "word": "CONGRUENT",
+      "type": "adjectif",
+      "correct": "qui convient bien"
+    },
+    {
+      "word": "CONJECTURE",
+      "type": "nom",
+      "correct": "hypothèse"
+    },
+    {
+      "word": "CONJONCTURE",
+      "type": "nom",
+      "correct": "situation"
+    },
+    {
+      "word": "CONSENSUEL",
+      "type": "adjectif",
+      "correct": "accepté par le plus grand nombre"
+    },
+    {
+      "word": "CONSENTIR",
+      "type": "verbe",
+      "correct": "accepter que quelque chose se fasse"
+    },
+    {
+      "word": "CONSORTIUM",
+      "type": "nom",
+      "correct": "groupement d'entreprises"
+    },
+    {
+      "word": "CONSPUER",
+      "type": "verbe",
+      "correct": "manifester bruyamment son désaccord"
+    },
+    {
+      "word": "CONTENTIEUX",
+      "type": "nom",
+      "correct": "ensemble de conflits"
+    },
+    {
+      "word": "CONTINGENCES",
+      "type": "nom",
+      "correct": "ce qui peut changer et n'a pas une grande importance"
+    },
+    {
+      "word": "CONTRACTUEL",
+      "type": "adjectif",
+      "correct": "établi par contrat"
+    },
+    {
+      "word": "CONTROVERSE",
+      "type": "nom",
+      "correct": "vive discussion"
+    },
+    {
+      "word": "CONVERGENCE",
+      "type": "nom",
+      "correct": "fait de tendre vers un même but"
+    },
+    {
+      "word": "CONVOITER",
+      "type": "verbe",
+      "correct": "désirer intensément"
+    },
+    {
+      "word": "COOPTATION",
+      "type": "nom",
+      "correct": "nomination par les membres qui font déjà partie d'un groupe"
+    },
+    {
+      "word": "COROLLAIRE",
+      "type": "nom",
+      "correct": "conséquence"
+    },
+    {
+      "word": "CORROBORER",
+      "type": "verbe",
+      "correct": "confirmer"
+    },
+    {
+      "word": "CORROMPRE",
+      "type": "verbe",
+      "correct": "pousser à mal agir"
+    },
+    {
+      "word": "CRÉANCE",
+      "type": "nom",
+      "correct": "droit d'exiger le paiement d'une somme"
+    },
+    {
+      "word": "CRISTALLISER",
+      "type": "verbe",
+      "correct": "rendre plus concret"
+    },
+    {
+      "word": "DÉBONNAIRE",
+      "type": "adjectif",
+      "correct": "d'une bonté excessive"
+    },
+    {
+      "word": "DÉBOUTER",
+      "type": "verbe",
+      "correct": "rejeter par jugement"
+    },
+    {
+      "word": "DÉCENCE",
+      "type": "nom",
+      "correct": "comportement correct"
+    },
+    {
+      "word": "DÉCLINER",
+      "type": "verbe",
+      "correct": "refuser"
+    },
+    {
+      "word": "DÉFÉRENCE",
+      "type": "nom",
+      "correct": "respect"
+    },
+    {
+      "word": "DÉFIANCE",
+      "type": "nom",
+      "correct": "méfiance"
+    },
+    {
+      "word": "DÉFLORER",
+      "type": "verbe",
+      "correct": "gâcher"
+    },
+    {
+      "word": "DÉGRESSIF",
+      "type": "adjectif",
+      "correct": "qui va en diminuant"
+    },
+    {
+      "word": "DÉLÉGUER",
+      "type": "verbe",
+      "correct": "confier à quelqu'un le pouvoir que l'on a"
+    },
+    {
+      "word": "DÉLÉTÈRE",
+      "type": "adjectif",
+      "correct": "mauvais (nuisible)"
+    },
+    {
+      "word": "DÉLIBÉRER",
+      "type": "verbe",
+      "correct": "réfléchir"
+    },
+    {
+      "word": "DÉLICTUEUX",
+      "type": "adjectif",
+      "correct": "qui constitue une violation de la loi"
+    },
+    {
+      "word": "DÉLIQUESCENCE",
+      "type": "nom",
+      "correct": "décomposition"
+    },
+    {
+      "word": "DÉMATÉRIALISER",
+      "type": "verbe",
+      "correct": "numériser"
+    },
+    {
+      "word": "DÉMÉRITER",
+      "type": "verbe",
+      "correct": "agir de façon telle que l'on perd l'estime d'autrui"
+    },
+    {
+      "word": "DÉMYSTIFIER",
+      "type": "verbe",
+      "correct": "détromper"
+    },
+    {
+      "word": "DÉNIGRER",
+      "type": "verbe",
+      "correct": "dire du mal"
+    },
+    {
+      "word": "DÉNOMINATEUR",
+      "type": "nom",
+      "correct": "élément partagé"
+    },
+    {
+      "word": "DÉNOTER",
+      "type": "verbe",
+      "correct": "indiquer"
+    },
+    {
+      "word": "DÉONTOLOGIQUE",
+      "type": "adjectif",
+      "correct": "moral"
+    },
+    {
+      "word": "DÉPOSITAIRE",
+      "type": "nom",
+      "correct": "personne à qui l'on confie quelque chose"
+    },
+    {
+      "word": "DÉPRÉCIER",
+      "type": "verbe",
+      "correct": "dévaloriser"
+    },
+    {
+      "word": "DÉPRÉDATION",
+      "type": "nom",
+      "correct": "dégradation"
+    },
+    {
+      "word": "DEROGER",
+      "type": "verbe",
+      "correct": "ne pas respecter"
+    },
+    {
+      "word": "DÉSAPPOINTEMENT",
+      "type": "nom",
+      "correct": "déception"
+    },
+    {
+      "word": "DÉSAVOUER",
+      "type": "verbe",
+      "correct": "désapprouver"
+    },
+    {
+      "word": "DÉSINVOLTURE",
+      "type": "nom",
+      "correct": "laisser-aller"
+    },
+    {
+      "word": "DÉSOBLIGEANT",
+      "type": "adjectif",
+      "correct": "desagreable"
+    },
+    {
+      "word": "DESSEIN",
+      "type": "nom",
+      "correct": "but"
+    },
+    {
+      "word": "DESTITUER",
+      "type": "verbe",
+      "correct": "priver quelqu’un de sa fonction"
+    },
+    {
+      "word": "DÉSUÉTUDE",
+      "type": "nom",
+      "correct": "caractère de ce qui est démodé"
+    },
+    {
+      "word": "DÉTERMINISME",
+      "type": "nom",
+      "correct": "rapport de cause à effet entre deux phénomènes"
+    },
+    {
+      "word": "DÉVOLU",
+      "type": "adjectif",
+      "correct": "attribué"
+    },
+    {
+      "word": "DÉVOYER",
+      "type": "verbe",
+      "correct": "détourner du droit chemin"
+    },
+    {
+      "word": "DIALECTIQUE",
+      "type": "nom",
+      "correct": "argumentation"
+    },
+    {
+      "word": "DIAMÉTRALEMENT",
+      "type": "adverbe",
+      "correct": "totalement"
+    },
+    {
+      "word": "DIATRIBE",
+      "type": "nom",
+      "correct": "critique violente"
+    },
+    {
+      "word": "DICHOTOMIE",
+      "type": "nom",
+      "correct": "division"
+    },
+    {
+      "word": "DIDACTIQUE",
+      "type": "adjectif",
+      "correct": "dont le but est d'enseigner"
+    },
+    {
+      "word": "DIFFAMATOIRE",
+      "type": "adjectif",
+      "correct": "qui salit la réputation"
+    },
+    {
+      "word": "DIGRESSION",
+      "type": "nom",
+      "correct": "fait de s'écarter du sujet"
+    },
+    {
+      "word": "DILATOIRE",
+      "type": "adjectif",
+      "correct": "qui cherche à gagner du temps"
+    },
+    {
+      "word": "DILIGENCE",
+      "type": "nom",
+      "correct": "rapidité et soin dans l'exécution d'une tâche"
+    },
+    {
+      "word": "DILIGENTER",
+      "type": "verbe",
+      "correct": "faire avec soin et rapidement"
+    },
+    {
+      "word": "DIPLOMATIE",
+      "type": "nom",
+      "correct": "tact"
+    },
+    {
+      "word": "DISCRÉDIT",
+      "type": "nom",
+      "correct": "perte de l'estime"
+    },
+    {
+      "word": "DISCRIMINANT",
+      "type": "adjectif",
+      "correct": "qui établit une séparation en traitant souvent mal"
+    },
+    {
+      "word": "DISERT",
+      "type": "adjectif",
+      "correct": "qui parle avec élégance et facilité"
+    },
+    {
+      "word": "DISPENDIEUX",
+      "type": "adjectif",
+      "correct": "qui coûte très cher"
+    },
+    {
+      "word": "DISRUPTIF",
+      "type": "adjectif",
+      "correct": "qui rompt avec ce qui se faisait"
+    },
+    {
+      "word": "DISSÉMINER",
+      "type": "verbe",
+      "correct": "disperser"
+    },
+    {
+      "word": "DISSIDENT",
+      "type": "adjectif",
+      "correct": "révolté"
+    },
+    {
+      "word": "DISSUADER",
+      "type": "verbe",
+      "correct": "décourager"
+    },
+    {
+      "word": "DITHYRAMBIQUE",
+      "type": "adjectif",
+      "correct": "élogieux"
+    },
+    {
+      "word": "DIVERGENCE",
+      "type": "nom",
+      "correct": "désaccord"
+    },
+    {
+      "word": "DOCTRINE",
+      "type": "nom",
+      "correct": "ensemble de principes"
+    },
+    {
+      "word": "DOGMATIQUE",
+      "type": "adjectif",
+      "correct": "autoritaire"
+    },
+    {
+      "word": "DOLÉANCE",
+      "type": "nom",
+      "correct": "plainte"
+    },
+    {
+      "word": "DOXA",
+      "type": "nom",
+      "correct": "opinions communément admises"
+    },
+    {
+      "word": "DRACONIEN",
+      "type": "adjectif",
+      "correct": "extrêmement sévère"
+    },
+    {
+      "word": "DRASTIQUE",
+      "type": "adjectif",
+      "correct": "radical"
+    },
+    {
+      "word": "DUBITATIF",
+      "type": "adjectif",
+      "correct": "qui exprime le doute"
+    },
+    {
+      "word": "DUPE",
+      "type": "adjectif",
+      "correct": "que l'on trompe facilement"
+    },
+    {
+      "word": "EBAUCHER",
+      "type": "verbe",
+      "correct": "préparer dans les grandes lignes"
+    },
+    {
+      "word": "ECHÉANCIER",
+      "type": "nom",
+      "correct": "ensemble de délais à respecter"
+    },
+    {
+      "word": "ÉCHELONNER",
+      "type": "verbe",
+      "correct": "étaler"
+    },
+    {
+      "word": "ÉCHEVEAU",
+      "type": "nom",
+      "correct": "situation complexe"
+    },
+    {
+      "word": "ÉCLECTIQUE",
+      "type": "adjectif",
+      "correct": "qui apprécie des choses diverses"
+    },
+    {
+      "word": "ECOSYSTEME",
+      "type": "nom",
+      "correct": "environnement"
+    },
+    {
+      "word": "ÉCRÊTER",
+      "type": "verbe",
+      "correct": "égaliser en supprimant la partie la plus haute"
+    },
+    {
+      "word": "ÉCUEIL",
+      "type": "nom",
+      "correct": "obstacle"
+    },
+    {
+      "word": "EDIFIANT",
+      "type": "adjectif",
+      "correct": "qui permet de se faire une opinion"
+    },
+    {
+      "word": "ELAGUER",
+      "type": "verbe",
+      "correct": "couper"
+    },
+    {
+      "word": "ELIGIBLE",
+      "type": "adjectif",
+      "correct": "qui peut bénéficier de quelque chose"
+    },
+    {
+      "word": "ELITE",
+      "type": "nom",
+      "correct": "petit groupe considéré comme supérieur"
+    },
+    {
+      "word": "ELOQUENCE",
+      "type": "nom",
+      "correct": "att de bien s'exprimer et de convaincre"
+    },
+    {
+      "word": "ÉLUCUBRATION",
+      "type": "nom",
+      "correct": "idée n'ayant pas beaucoup de sens"
+    },
+    {
+      "word": "ELUDER",
+      "type": "verbe",
+      "correct": "éviter"
+    },
+    {
+      "word": "EMARGEMENT",
+      "type": "nom",
+      "correct": "signature"
+    },
+    {
+      "word": "EMBLÉMATIQUE",
+      "type": "adjectif",
+      "correct": "représentatif"
+    },
+    {
+      "word": "EMERGENT",
+      "type": "adjectif",
+      "correct": "dont léconomie se développe"
+    },
+    {
+      "word": "EMINEMMENT",
+      "type": "adverbe",
+      "correct": "extrêmement"
+    },
+    {
+      "word": "EMOLUMENTS",
+      "type": "nom",
+      "correct": "salaire"
+    },
+    {
+      "word": "EMPATHIE",
+      "type": "nom",
+      "correct": "capacité de ressentir ce que l'autre ressent"
+    },
+    {
+      "word": "EMPHATIQUE",
+      "type": "adjectif",
+      "correct": "qui fait preuve d'une exagération un peu ridicule"
+    },
+    {
+      "word": "EMPIRIQUEMENT",
+      "type": "adverbe",
+      "correct": "en ne s'appuyant que sur l'expérience"
+    },
+    {
+      "word": "ÉMULATION",
+      "type": "nom",
+      "correct": "saine compétition"
+    },
+    {
+      "word": "EN APARTÉ",
+      "type": "nom",
+      "correct": "de façon à ne pas être entendu par tous"
+    },
+    {
+      "word": "EN DILETTANTE",
+      "type": "nom",
+      "correct": "en amateur"
+    },
+    {
+      "word": "EN LICE",
+      "type": "nom",
+      "correct": "dans la compétition"
+    },
+    {
+      "word": "ENCENSER",
+      "type": "verbe",
+      "correct": "faire des compliments excessifs"
+    },
+    {
+      "word": "ENDÉMIQUE",
+      "type": "adjectif",
+      "correct": "qui fait constamment des ravages dans un endroit"
+    },
+    {
+      "word": "ENDOGÈNE",
+      "type": "adjectif",
+      "correct": "interne"
+    },
+    {
+      "word": "ENGOUEMENT",
+      "type": "nom",
+      "correct": "enthousiasme"
+    },
+    {
+      "word": "ENJOINDRE",
+      "type": "verbe",
+      "correct": "ordonner"
+    },
+    {
+      "word": "ENTÉRINER",
+      "type": "verbe",
+      "correct": "accepter définitivement"
+    },
+    {
+      "word": "ENTREMISE",
+      "type": "nom",
+      "correct": "fait d'intervenir pour rapprocher"
+    },
+    {
+      "word": "ENTREVUE",
+      "type": "nom",
+      "correct": "entretien"
+    },
+    {
+      "word": "ÉPARS",
+      "type": "adjectif",
+      "correct": "dispersé"
+    },
+    {
+      "word": "ÉPISTOLAIRE",
+      "type": "adjectif",
+      "correct": "par lettres"
+    },
+    {
+      "word": "ÉPONYME",
+      "type": "adjectif",
+      "correct": "qui donne son nom"
+    },
+    {
+      "word": "EQUANIMITE",
+      "type": "nom",
+      "correct": "tranquillité"
+    },
+    {
+      "word": "ERGONOMIQUE",
+      "type": "adjectif",
+      "correct": "bien adapté"
+    },
+    {
+      "word": "ERGOTER",
+      "type": "verbe",
+      "correct": "discuter sur des détails"
+    },
+    {
+      "word": "ERRATIQUE",
+      "type": "adjectif",
+      "correct": "qui n'est pas régulier"
+    },
+    {
+      "word": "ERSATZ",
+      "type": "nom",
+      "correct": "ce qui remplace en moins bien"
+    },
+    {
+      "word": "ESCLANDRE",
+      "type": "nom",
+      "correct": "scandale"
+    },
+    {
+      "word": "ESSAIMER",
+      "type": "verbe",
+      "correct": "s'étendre"
+    },
+    {
+      "word": "ESSOR",
+      "type": "nom",
+      "correct": "croissance"
+    },
+    {
+      "word": "ÉTHIQUE",
+      "type": "nom",
+      "correct": "morale"
+    },
+    {
+      "word": "EUPHEMISME",
+      "type": "nom",
+      "correct": "expression adoucie"
+    },
+    {
+      "word": "ÉVANGÉLISER",
+      "type": "verbe",
+      "correct": "convertir"
+    },
+    {
+      "word": "ÉVASIF",
+      "type": "adjectif",
+      "correct": "qui reste imprécis pour éviter une difficulté"
+    },
+    {
+      "word": "ÉVOCATION",
+      "type": "nom",
+      "correct": "fait de rendre présent à l'esprit"
+    },
+    {
+      "word": "EX NIHILO",
+      "type": "nom",
+      "correct": "en partant de rien"
+    },
+    {
+      "word": "EXÉCRER",
+      "type": "verbe",
+      "correct": "détester"
+    },
+    {
+      "word": "EXÉGÈSE",
+      "type": "nom",
+      "correct": "commentaire détaillé"
+    },
+    {
+      "word": "EXHORTER",
+      "type": "verbe",
+      "correct": "inciter"
+    },
+    {
+      "word": "EXHUMER",
+      "type": "verbe",
+      "correct": "tirer de l'oubli"
+    },
+    {
+      "word": "EXPECTATIVE",
+      "type": "nom",
+      "correct": "attente"
+    },
+    {
+      "word": "EXPÉDIENT",
+      "type": "nom",
+      "correct": "moyen qui ne règle un problème que provisoirement"
+    },
+    {
+      "word": "EXPONENTIEL",
+      "type": "adjectif",
+      "correct": "qui augmente très vite"
+    },
+    {
+      "word": "EXPURGER",
+      "type": "verbe",
+      "correct": "couper"
+    },
+    {
+      "word": "EXSANGUE",
+      "type": "adjectif",
+      "correct": "qui a perdu sa force"
+    },
+    {
+      "word": "EXTRAPOLATION",
+      "type": "nom",
+      "correct": "généralisation"
+    },
+    {
+      "word": "FACONDE",
+      "type": "nom",
+      "correct": "manière de parler avec facilité et abondance"
+    },
+    {
+      "word": "FACTICE",
+      "type": "adjectif",
+      "correct": "qui n'est pas naturel"
+    },
+    {
+      "word": "FACTUEL",
+      "type": "adjectif",
+      "correct": "qui s'en tient aux faits"
+    },
+    {
+      "word": "FAIRE FI",
+      "type": "nom",
+      "correct": "mépriser"
+    },
+    {
+      "word": "FAIRE-VALOIR",
+      "type": "nom",
+      "correct": "personne qui en met une autre en valeur"
+    },
+    {
+      "word": "FALLACIEUX",
+      "type": "adjectif",
+      "correct": "trompeur"
+    },
+    {
+      "word": "FÉDÉRER",
+      "type": "verbe",
+      "correct": "réunir"
+    },
+    {
+      "word": "FEINDRE",
+      "type": "verbe",
+      "correct": "faire semblant"
+    },
+    {
+      "word": "FLAGORNERIE",
+      "type": "nom",
+      "correct": "Aatterie grossière"
+    },
+    {
+      "word": "FLORISSANT",
+      "type": "adjectif",
+      "correct": "qui se développe et a du succès"
+    },
+    {
+      "word": "FLOUER",
+      "type": "verbe",
+      "correct": "abuser de la confiance"
+    },
+    {
+      "word": "FLUCTUATION",
+      "type": "nom",
+      "correct": "variation"
+    },
+    {
+      "word": "FORTUITEMENT",
+      "type": "adverbe",
+      "correct": "par hasard"
+    },
+    {
+      "word": "FUSTIGER",
+      "type": "verbe",
+      "correct": "critiquer violemment"
+    },
+    {
+      "word": "GAGEURE",
+      "type": "nom",
+      "correct": "défi à relever"
+    },
+    {
+      "word": "GALVANISER",
+      "type": "verbe",
+      "correct": "donner de l'énergie"
+    },
+    {
+      "word": "GALVAUDER",
+      "type": "verbe",
+      "correct": "gâcher par un mauvais usage"
+    },
+    {
+      "word": "GÉNÉRIQUE",
+      "type": "adjectif",
+      "correct": "qui désigne toute une catégorie"
+    },
+    {
+      "word": "GENÈSE",
+      "type": "nom",
+      "correct": "processus de création"
+    },
+    {
+      "word": "GRANDILOQUENT",
+      "type": "adjectif",
+      "correct": "dont l'expression manque beaucoup de simplicité"
+    },
+    {
+      "word": "GRATIFIANT",
+      "type": "adjectif",
+      "correct": "valorisant"
+    },
+    {
+      "word": "GREGAIRE",
+      "type": "adjectif",
+      "correct": "qui suit le groupe"
+    },
+    {
+      "word": "GRIEF",
+      "type": "nom",
+      "correct": "motif de plainte"
+    },
+    {
+      "word": "HABILITATION",
+      "type": "nom",
+      "correct": "autorisation"
+    },
+    {
+      "word": "HARANGUER",
+      "type": "verbe",
+      "correct": "prononcer un discours solennel"
+    },
+    {
+      "word": "HÉGÉMONIE",
+      "type": "nom",
+      "correct": "domination"
+    },
+    {
+      "word": "HÉRÉSIE",
+      "type": "nom",
+      "correct": "sacrilège"
+    },
+    {
+      "word": "HÉTÉROCLITE",
+      "type": "adjectif",
+      "correct": "varié"
+    },
+    {
+      "word": "HIATUS",
+      "type": "nom",
+      "correct": "décalage posant un problème"
+    },
+    {
+      "word": "HIÉRARCHISER",
+      "type": "verbe",
+      "correct": "classer en fonction de l'importance"
+    },
+    {
+      "word": "HOMOGENE",
+      "type": "adjectif",
+      "correct": "qui présente une grande unité"
+    },
+    {
+      "word": "HOMOLOGUER",
+      "type": "verbe",
+      "correct": "valider officiellement"
+    },
+    {
+      "word": "HOMONYME",
+      "type": "nom",
+      "correct": "mot qui se prononce comme un autre mais de sens différent"
+    },
+    {
+      "word": "HUMBLEMENT",
+      "type": "adverbe",
+      "correct": "modestement"
+    },
+    {
+      "word": "HYPOTHÉTIQUE",
+      "type": "adjectif",
+      "correct": "incertain"
+    },
+    {
+      "word": "IDOINE",
+      "type": "adjectif",
+      "correct": "qui convient"
+    },
+    {
+      "word": "ILLICITE",
+      "type": "adjectif",
+      "correct": "interdit"
+    },
+    {
+      "word": "IMPASSIBLE",
+      "type": "adjectif",
+      "correct": "imperturbable"
+    },
+    {
+      "word": "IMPAVIDE",
+      "type": "adjectif",
+      "correct": "qui n'éprouve pas de peur"
+    },
+    {
+      "word": "IMPLANTER",
+      "type": "verbe",
+      "correct": "établir"
+    },
+    {
+      "word": "IMPLICITEMENT",
+      "type": "adverbe",
+      "correct": "d'une manière sous-entendue"
+    },
+    {
+      "word": "IMPONDÉRABLE",
+      "type": "nom",
+      "correct": "élément imprévisible dont l'effet peut être important"
+    },
+    {
+      "word": "IMPRÉCATION",
+      "type": "nom",
+      "correct": "malheur qu'on souhaite à quelqu'un"
+    },
+    {
+      "word": "IMPUTER",
+      "type": "verbe",
+      "correct": "attribuer la responsabilité"
+    },
+    {
+      "word": "IN EXTENSO",
+      "type": "nom",
+      "correct": "complètement"
+    },
+    {
+      "word": "INANITÉ",
+      "type": "nom",
+      "correct": "inutilité"
+    },
+    {
+      "word": "INCIDENCE",
+      "type": "nom",
+      "correct": "conséquence"
+    },
+    {
+      "word": "INCLINATION",
+      "type": "nom",
+      "correct": "penchant"
+    },
+    {
+      "word": "INCONGRU",
+      "type": "adjectif",
+      "correct": "qui est contraire à ce que l'on juge convenable"
+    },
+    {
+      "word": "INCONSÉQUENT",
+      "type": "adjectif",
+      "correct": "qui agit sans réfléchir suffisamment"
+    },
+    {
+      "word": "INDICIBLE",
+      "type": "adjectif",
+      "correct": "que l'on ne peut pas exprimer"
+    },
+    {
+      "word": "INDIGENT",
+      "type": "adjectif",
+      "correct": "pauvre"
+    },
+    {
+      "word": "INDUBITABLEMENT",
+      "type": "adverbe",
+      "correct": "sans aucun doute"
+    },
+    {
+      "word": "INDULGENCE",
+      "type": "nom",
+      "correct": "capacité de pardonner"
+    },
+    {
+      "word": "INDÛMENT",
+      "type": "adverbe",
+      "correct": "à tort"
+    },
+    {
+      "word": "INÉLUCTABLEMENT",
+      "type": "adverbe",
+      "correct": "d'une manière inévitable"
+    },
+    {
+      "word": "INERTIE",
+      "type": "nom",
+      "correct": "manque total d'activité"
+    },
+    {
+      "word": "INEXTINGUIBLE",
+      "type": "adjectif",
+      "correct": "que l'on ne peut pas arrêter"
+    },
+    {
+      "word": "INFÉODÉ",
+      "type": "adjectif",
+      "correct": "soumis"
+    },
+    {
+      "word": "INFIRMER",
+      "type": "verbe",
+      "correct": "démentir"
+    },
+    {
+      "word": "INFONDÉ",
+      "type": "adjectif",
+      "correct": "qui n'est pas justifié"
+    },
+    {
+      "word": "INFORMEL",
+      "type": "adjectif",
+      "correct": "qui se passe en toute simplicité"
+    },
+    {
+      "word": "INGÉRENCE",
+      "type": "nom",
+      "correct": "action d'intervenir sans y être autorisé"
+    },
+    {
+      "word": "INHÉRENT",
+      "type": "adjectif",
+      "correct": "qui est lié nécessairement"
+    },
+    {
+      "word": "INHIBER",
+      "type": "verbe",
+      "correct": "paralyser"
+    },
+    {
+      "word": "INIQUE",
+      "type": "adjectif",
+      "correct": "injuste"
+    },
+    {
+      "word": "INJONCTION",
+      "type": "nom",
+      "correct": "ordre"
+    },
+    {
+      "word": "INSIDIEUSEMENT",
+      "type": "adverbe",
+      "correct": "d'une manière trompeuse"
+    },
+    {
+      "word": "INSTANCE",
+      "type": "nom",
+      "correct": "organisme ayant un pouvoir de décision"
+    },
+    {
+      "word": "INTELLIGIBLE",
+      "type": "adjectif",
+      "correct": "que l'on peut facilement comprendre"
+    },
+    {
+      "word": "INTERCÉDER",
+      "type": "verbe",
+      "correct": "intervenir"
+    },
+    {
+      "word": "INTIMER",
+      "type": "verbe",
+      "correct": "demander avec autorité"
+    },
+    {
+      "word": "INTRANSIGEANT",
+      "type": "adjectif",
+      "correct": "qui se montre dur"
+    },
+    {
+      "word": "INTRINSÈQUEMENT",
+      "type": "adverbe",
+      "correct": "par nature"
+    },
+    {
+      "word": "INTROVERTI",
+      "type": "adjectif",
+      "correct": "replié sur soi"
+    },
+    {
+      "word": "INVECTIVER",
+      "type": "verbe",
+      "correct": "insulter"
+    },
+    {
+      "word": "INVESTITURE",
+      "type": "nom",
+      "correct": "acte par lequel on est chargé d'une fonction"
+    },
+    {
+      "word": "INVOQUER",
+      "type": "verbe",
+      "correct": "faire appel a"
+    },
+    {
+      "word": "IRRÉFUTABLEMENT",
+      "type": "adverbe",
+      "correct": "incontestablement"
+    },
+    {
+      "word": "IRRÉVÉRENCIEUX",
+      "type": "adjectif",
+      "correct": "irrespectueux"
+    },
+    {
+      "word": "IRRÉVOCABLEMENT",
+      "type": "adverbe",
+      "correct": "définitivement"
+    },
+    {
+      "word": "ITÉRATIF",
+      "type": "adjectif",
+      "correct": "qui est répété plusieurs fois"
+    },
+    {
+      "word": "JALON",
+      "type": "nom",
+      "correct": "point de repère"
+    },
+    {
+      "word": "JURISPRUDENCE",
+      "type": "nom",
+      "correct": "décision qui sert de référence"
+    },
+    {
+      "word": "KAFKAÏEN",
+      "type": "adjectif",
+      "correct": "absurde et inquiétant"
+    },
+    {
+      "word": "KYRIELLE",
+      "type": "nom",
+      "correct": "grande quantité"
+    },
+    {
+      "word": "LACONIQUE",
+      "type": "adjectif",
+      "correct": "qui s'exprime en peu de mots"
+    },
+    {
+      "word": "LACUNAIRE",
+      "type": "adjectif",
+      "correct": "incomplet"
+    },
+    {
+      "word": "L'ALPHA ET L'OMÉGA",
+      "type": "nom",
+      "correct": "ce qui constitue la totalité de quelque chose"
+    },
+    {
+      "word": "LAPALISSADE",
+      "type": "nom",
+      "correct": "évidence"
+    },
+    {
+      "word": "LAPIDAIRE",
+      "type": "adjectif",
+      "correct": "bref et ferme"
+    },
+    {
+      "word": "LÉGISLATION",
+      "type": "nom",
+      "correct": "loi"
+    },
+    {
+      "word": "LEGITIMEMENT",
+      "type": "adverbe",
+      "correct": "à juste titre"
+    },
+    {
+      "word": "LÉNIFIANT",
+      "type": "adjectif",
+      "correct": "qui vise à rassurer en trompant"
+    },
+    {
+      "word": "LÉSINER",
+      "type": "verbe",
+      "correct": "économiser avec excès"
+    },
+    {
+      "word": "LEURRER",
+      "type": "verbe",
+      "correct": "tromper"
+    },
+    {
+      "word": "LIMINAIRE",
+      "type": "adjectif",
+      "correct": "placé au début"
+    },
+    {
+      "word": "LIMOGEAGE",
+      "type": "nom",
+      "correct": "fait d'ôter à quelqu'un le pouvoir qui lui avait été confié"
+    },
+    {
+      "word": "LITANIE",
+      "type": "nom",
+      "correct": "énumération ennuyeuse"
+    },
+    {
+      "word": "LITIGE",
+      "type": "nom",
+      "correct": "conflit"
+    },
+    {
+      "word": "LITTÉRALEMENT",
+      "type": "adverbe",
+      "correct": "véritablement"
+    },
+    {
+      "word": "LOGORRHÉE",
+      "type": "nom",
+      "correct": "paroles inutiles qui n'en finissent pas"
+    },
+    {
+      "word": "LUCRATIF",
+      "type": "adjectif",
+      "correct": "qui rapporte de l'argent"
+    },
+    {
+      "word": "MAGNANIME",
+      "type": "adjectif",
+      "correct": "qui a de la grandeur d'âme"
+    },
+    {
+      "word": "MALENCONTREUSEMENT",
+      "type": "adverbe",
+      "correct": "d'une manière qui tombe mal"
+    },
+    {
+      "word": "MANDATER",
+      "type": "verbe",
+      "correct": "confier à quelqu'un le pouvoir d'agir en son nom"
+    },
+    {
+      "word": "MANICHÉEN",
+      "type": "adjectif",
+      "correct": "qui juge les choses selon le bien et le mal"
+    },
+    {
+      "word": "MANIFESTE",
+      "type": "nom",
+      "correct": "déclaration publique"
+    },
+    {
+      "word": "MANSUÉTUDE",
+      "type": "nom",
+      "correct": "bonté"
+    },
+    {
+      "word": "MARGINALISER",
+      "type": "verbe",
+      "correct": "mettre à l'écart"
+    },
+    {
+      "word": "MÉANDRE",
+      "type": "nom",
+      "correct": "détour"
+    },
+    {
+      "word": "MÉCÈNE",
+      "type": "nom",
+      "correct": "bienfaiteur"
+    },
+    {
+      "word": "MÉDIATEUR",
+      "type": "nom",
+      "correct": "Personne qui s'efforce de résoudre un conflit"
+    },
+    {
+      "word": "MÉSALLIANCE",
+      "type": "nom",
+      "correct": "mauvaise union"
+    },
+    {
+      "word": "MÉTAPHORE",
+      "type": "nom",
+      "correct": "image qui permet de comparer une chose avec une autre"
+    },
+    {
+      "word": "MÉTAPHYSIQUE",
+      "type": "adjectif",
+      "correct": "abstrait"
+    },
+    {
+      "word": "MIÈVRE",
+      "type": "adjectif",
+      "correct": "fade"
+    },
+    {
+      "word": "MIMÉTISME",
+      "type": "nom",
+      "correct": "imitation"
+    },
+    {
+      "word": "MINUTIE",
+      "type": "nom",
+      "correct": "soin extrême"
+    },
+    {
+      "word": "MISOGYNIE",
+      "type": "nom",
+      "correct": "mépris envers les femmes"
+    },
+    {
+      "word": "MODALITÉ",
+      "type": "nom",
+      "correct": "condition"
+    },
+    {
+      "word": "MODIQUE",
+      "type": "adjectif",
+      "correct": "peu élevé"
+    },
+    {
+      "word": "MODULER",
+      "type": "verbe",
+      "correct": "adapter"
+    },
+    {
+      "word": "MODUS VIVENDI",
+      "type": "nom",
+      "correct": "arrangement"
+    },
+    {
+      "word": "MONOLITHIQUE",
+      "type": "adjectif",
+      "correct": "d'un seul bloc"
+    },
+    {
+      "word": "MORATOIRE",
+      "type": "nom",
+      "correct": "suspension volontaire d'une action"
+    },
+    {
+      "word": "MUTATION",
+      "type": "nom",
+      "correct": "transformation"
+    },
+    {
+      "word": "MUTISME",
+      "type": "nom",
+      "correct": "attitude de celui qui se tait"
+    },
+    {
+      "word": "MUTUALISER",
+      "type": "verbe",
+      "correct": "mette en commun"
+    },
+    {
+      "word": "MYTHIFIER",
+      "type": "verbe",
+      "correct": "idéaliser"
+    },
+    {
+      "word": "NÉBULEUX",
+      "type": "adjectif",
+      "correct": "qui manque de clarté"
+    },
+    {
+      "word": "NÉOLOGISME",
+      "type": "nom",
+      "correct": "mot nouveau"
+    },
+    {
+      "word": "NONOBSTANT",
+      "type": "adverbe",
+      "correct": "malgré"
+    },
+    {
+      "word": "NORMATIF",
+      "type": "adjectif",
+      "correct": "qui donne des règles"
+    },
+    {
+      "word": "NOTA BENE",
+      "type": "nom",
+      "correct": "remarque"
+    },
+    {
+      "word": "NUMERUS CLAUSUS",
+      "type": "nom",
+      "correct": "nombre limité de personnes admises"
+    },
+    {
+      "word": "OBÉRER",
+      "type": "verbe",
+      "correct": "constituer un danger"
+    },
+    {
+      "word": "OBJECTER",
+      "type": "verbe",
+      "correct": "répondre en s'opposant à ce qui a été dit"
+    },
+    {
+      "word": "OBSÉQUIEUX",
+      "type": "adjectif",
+      "correct": "poli à l'excès"
+    },
+    {
+      "word": "OBSOLÈTE",
+      "type": "adjectif",
+      "correct": "dépassé"
+    },
+    {
+      "word": "OBTEMPÉRER",
+      "type": "verbe",
+      "correct": "obéir"
+    },
+    {
+      "word": "OCCULTER",
+      "type": "verbe",
+      "correct": "cacher"
+    },
+    {
+      "word": "OCCURRENCE",
+      "type": "nom",
+      "correct": "apparition d'un mot dans un discours"
+    },
+    {
+      "word": "OCTROYER",
+      "type": "verbe",
+      "correct": "accorder"
+    },
+    {
+      "word": "OFFICIEUSEMENT",
+      "type": "adverbe",
+      "correct": "confidentiellement"
+    },
+    {
+      "word": "OMETTRE",
+      "type": "verbe",
+      "correct": "oublier de dire ou de faire"
+    },
+    {
+      "word": "OMNIPOTENT",
+      "type": "adjectif",
+      "correct": "tout-puissant"
+    },
+    {
+      "word": "OMNIPRÉSENT",
+      "type": "adjectif",
+      "correct": "qui est partout"
+    },
+    {
+      "word": "OMNISCIENT",
+      "type": "adjectif",
+      "correct": "qui sait tout"
+    },
+    {
+      "word": "ONIRIQUE",
+      "type": "adjectif",
+      "correct": "qui semble sorti d'un rêve"
+    },
+    {
+      "word": "OPACITÉ",
+      "type": "nom",
+      "correct": "caractère de ce qui est difficile à comprendre"
+    },
+    {
+      "word": "OPINIÂTRE",
+      "type": "adjectif",
+      "correct": "acharné"
+    },
+    {
+      "word": "OPPORTUN",
+      "type": "adjectif",
+      "correct": "qui convient"
+    },
+    {
+      "word": "OPPROBRE",
+      "type": "nom",
+      "correct": "honte"
+    },
+    {
+      "word": "OSMOSE",
+      "type": "nom",
+      "correct": "harmonie fondée sur l'échange"
+    },
+    {
+      "word": "OSTENSIBLEMENT",
+      "type": "adverbe",
+      "correct": "de façon que cela se remarque"
+    },
+    {
+      "word": "OUTRECUIDANCE",
+      "type": "nom",
+      "correct": "prétention"
+    },
+    {
+      "word": "OXYMORE",
+      "type": "nom",
+      "correct": "association de deux mots contradictoires"
+    },
+    {
+      "word": "PALABRES",
+      "type": "nom",
+      "correct": "discussion longue et inutile"
+    },
+    {
+      "word": "PALLIATIF",
+      "type": "nom",
+      "correct": "moyen provisoire"
+    },
+    {
+      "word": "PARADIGME",
+      "type": "nom",
+      "correct": "modèle de pensée"
+    },
+    {
+      "word": "PARADOXE",
+      "type": "nom",
+      "correct": "ce qui heurte le bon sens"
+    },
+    {
+      "word": "PARAPHRASER",
+      "type": "verbe",
+      "correct": "commenter en disant à peu près la même chose"
+    },
+    {
+      "word": "PARITÉ",
+      "type": "nom",
+      "correct": "égalité"
+    },
+    {
+      "word": "PAROXYSME",
+      "type": "nom",
+      "correct": "plus haut degré"
+    },
+    {
+      "word": "PARTIAL",
+      "type": "adjectif",
+      "correct": "qui prend parti"
+    },
+    {
+      "word": "PÂTIR",
+      "type": "verbe",
+      "correct": "souffrir"
+    },
+    {
+      "word": "PÉCUNIAIRE",
+      "type": "adjectif",
+      "correct": "relatif à l'argent"
+    },
+    {
+      "word": "PÉJORATIF",
+      "type": "adjectif",
+      "correct": "qui comporte une idée négative"
+    },
+    {
+      "word": "PENSUM",
+      "type": "nom",
+      "correct": "corvée"
+    },
+    {
+      "word": "PÉRÉGRINATIONS",
+      "type": "nom",
+      "correct": "déplacements incessants"
+    },
+    {
+      "word": "PÉREMPTOIRE",
+      "type": "adjectif",
+      "correct": "catégorique"
+    },
+    {
+      "word": "PÉRENNE",
+      "type": "adjectif",
+      "correct": "qui dure longtemps"
+    },
+    {
+      "word": "PÉRICLITER",
+      "type": "verbe",
+      "correct": "aller mal"
+    },
+    {
+      "word": "PERMISSIF",
+      "type": "adjectif",
+      "correct": "qui fait preuve d'une tolérance excessive"
+    },
+    {
+      "word": "PERNICIEUX",
+      "type": "adjectif",
+      "correct": "mauvais"
+    },
+    {
+      "word": "PÉRORER",
+      "type": "verbe",
+      "correct": "parler d'une façon prétentieuse"
+    },
+    {
+      "word": "PERSONA NON GRATA",
+      "type": "nom",
+      "correct": "personne qui n'est pas la bienvenue"
+    },
+    {
+      "word": "PERSUASIF",
+      "type": "adjectif",
+      "correct": "convaincant"
+    },
+    {
+      "word": "PHILANTHROPE",
+      "type": "nom",
+      "correct": "personne généreuse qui ne cherche pas à s’enrichir"
+    },
+    {
+      "word": "PIS-ALLER",
+      "type": "nom",
+      "correct": "solution qu’on adopte faute de mieux"
+    },
+    {
+      "word": "PLAGIAT",
+      "type": "nom",
+      "correct": "copie illégale d’une oeuvre"
+    },
+    {
+      "word": "PLAIDER",
+      "type": "verbe",
+      "correct": "défendre"
+    },
+    {
+      "word": "PLÉBISCITER",
+      "type": "verbe",
+      "correct": "approuver en très grand nombre"
+    },
+    {
+      "word": "PLÉONASME",
+      "type": "nom",
+      "correct": "répétition fautive"
+    },
+    {
+      "word": "PLÉTHORIQUE",
+      "type": "adjectif",
+      "correct": "présent en trop grand nombre"
+    },
+    {
+      "word": "PLURALISME",
+      "type": "nom",
+      "correct": "système qui admet des éléments différents"
+    },
+    {
+      "word": "POLÉMIQUER",
+      "type": "verbe",
+      "correct": "débattre d'une manière vive"
+    },
+    {
+      "word": "PONCIF",
+      "type": "nom",
+      "correct": "idée trop banale"
+    },
+    {
+      "word": "PONTIFIER",
+      "type": "verbe",
+      "correct": "parler en prenant un air trop important"
+    },
+    {
+      "word": "POSTULAT",
+      "type": "nom",
+      "correct": "principe de base"
+    },
+    {
+      "word": "POURVOIR",
+      "type": "verbe",
+      "correct": "fournir"
+    },
+    {
+      "word": "PRAGMATIQUE",
+      "type": "adjectif",
+      "correct": "adapté à l'action concrète"
+    },
+    {
+      "word": "PRÉ CARRÉ",
+      "type": "nom",
+      "correct": "domaine réservé"
+    },
+    {
+      "word": "PRÉAMBULE",
+      "type": "nom",
+      "correct": "ce qui précède quelque chose"
+    },
+    {
+      "word": "PRÉCAIRE",
+      "type": "adjectif",
+      "correct": "fragile"
+    },
+    {
+      "word": "PRÉDICTIF",
+      "type": "adjectif",
+      "correct": "qui permet de prévoir"
+    },
+    {
+      "word": "PRÉDISPOSER",
+      "type": "verbe",
+      "correct": "préparer bien à l'avance"
+    },
+    {
+      "word": "PRÉEMINENCE",
+      "type": "nom",
+      "correct": "supériorité"
+    },
+    {
+      "word": "PRÉEMPTER",
+      "type": "verbe",
+      "correct": "s'emparer de quelque chose avant les autres"
+    },
+    {
+      "word": "PRÉJUDICE",
+      "type": "nom",
+      "correct": "acte qui cause du tort à quelqu'un"
+    },
+    {
+      "word": "PRÉMICES",
+      "type": "nom",
+      "correct": "début"
+    },
+    {
+      "word": "PRÉPOSER",
+      "type": "verbe",
+      "correct": "confier une responsabilité"
+    },
+    {
+      "word": "PRÉREQUIS",
+      "type": "nom",
+      "correct": "condition exigée"
+    },
+    {
+      "word": "PRÉROGATIVE",
+      "type": "nom",
+      "correct": "pouvoir attaché à une fonction"
+    },
+    {
+      "word": "PRESOMPTION",
+      "type": "nom",
+      "correct": "hypothèse"
+    },
+    {
+      "word": "PRÉSOMPTUEUX",
+      "type": "adjectif",
+      "correct": "qui a trop confiance en soi"
+    },
+    {
+      "word": "PRISME",
+      "type": "nom",
+      "correct": "élément qui déforme la réalité"
+    },
+    {
+      "word": "PROACTIF",
+      "type": "adjectif",
+      "correct": "qui anticipe"
+    },
+    {
+      "word": "PROBATOIRE",
+      "type": "adjectif",
+      "correct": "qui permet de vérifier les capacités"
+    },
+    {
+      "word": "PROBITÉ",
+      "type": "nom",
+      "correct": "honnêteté"
+    },
+    {
+      "word": "PROCRASTINATION",
+      "type": "nom",
+      "correct": "tendance à remettre à plus tard"
+    },
+    {
+      "word": "PRODIGUER",
+      "type": "verbe",
+      "correct": "donner généreusement"
+    },
+    {
+      "word": "PROFANE",
+      "type": "adjectif",
+      "correct": "qui ne s'y connaît pas"
+    },
+    {
+      "word": "PROFÉRER",
+      "type": "verbe",
+      "correct": "dire à voix haute"
+    },
+    {
+      "word": "PROLIFÉRER",
+      "type": "verbe",
+      "correct": "se multiplier"
+    },
+    {
+      "word": "PROLIXE",
+      "type": "adjectif",
+      "correct": "trop bavard"
+    },
+    {
+      "word": "PROMPT",
+      "type": "adjectif",
+      "correct": "qui agit rapidement"
+    },
+    {
+      "word": "PROMULGUER",
+      "type": "verbe",
+      "correct": "publier officiellement"
+    },
+    {
+      "word": "PRÔNER",
+      "type": "verbe",
+      "correct": "recommander PROROGER: prolonger"
+    },
+    {
+      "word": "PROSAÏQUE",
+      "type": "adjectif",
+      "correct": "terre à terre"
+    },
+    {
+      "word": "PROSÉLYTISME",
+      "type": "nom",
+      "correct": "zèle pour recruter des adeptes"
+    },
+    {
+      "word": "PROSPECTIVE",
+      "type": "nom",
+      "correct": "réflexion sur l'avenir"
+    },
+    {
+      "word": "PROTAGONISTE",
+      "type": "nom",
+      "correct": "personnage essentiel"
+    },
+    {
+      "word": "PROTÉIFORME",
+      "type": "adjectif",
+      "correct": "qui peut prendre diverses formes"
+    },
+    {
+      "word": "PROTOCOLE",
+      "type": "nom",
+      "correct": "ensemble de règles à respecter"
+    },
+    {
+      "word": "PROTOTYPE",
+      "type": "nom",
+      "correct": "premier exemplaire d'un modèle"
+    },
+    {
+      "word": "PUGNACE",
+      "type": "adjectif",
+      "correct": "combatif"
+    },
+    {
+      "word": "PUTATIF",
+      "type": "adjectif",
+      "correct": "supposé"
+    },
+    {
+      "word": "QUIDAM",
+      "type": "nom",
+      "correct": "individu"
+    },
+    {
+      "word": "QUINTESSENCE",
+      "type": "nom",
+      "correct": "ce qu'il y a d'essentiel"
+    },
+    {
+      "word": "RADIER",
+      "type": "verbe",
+      "correct": "exclure"
+    },
+    {
+      "word": "RATIFIER",
+      "type": "verbe",
+      "correct": "approuver"
+    },
+    {
+      "word": "RATIO",
+      "type": "nom",
+      "correct": "rapport entre deux chiffres"
+    },
+    {
+      "word": "RATIONALISATION",
+      "type": "nom",
+      "correct": "fait de rendre plus efficace"
+    },
+    {
+      "word": "RÉCIPIENDAIRE",
+      "type": "nom",
+      "correct": "personne que l'on récompense"
+    },
+    {
+      "word": "RÉCIPROQUE",
+      "type": "adjectif",
+      "correct": "qui implique un échange égal"
+    },
+    {
+      "word": "RECOUVREMENT",
+      "type": "nom",
+      "correct": "action de recevoir le paiement de ce qui est dû"
+    },
+    {
+      "word": "RÉCRIMINER",
+      "type": "verbe",
+      "correct": "critiquer"
+    },
+    {
+      "word": "RECRUDESCENCE",
+      "type": "nom",
+      "correct": "augmentation"
+    },
+    {
+      "word": "RÉCURRENT",
+      "type": "adjectif",
+      "correct": "qui revient souvent"
+    },
+    {
+      "word": "REDONDANT",
+      "type": "adjectif",
+      "correct": "qui a déjà été dit et est de trop"
+    },
+    {
+      "word": "REGALIEN",
+      "type": "adjectif",
+      "correct": "qui dépend directement de l'État"
+    },
+    {
+      "word": "REGORGER",
+      "type": "verbe",
+      "correct": "être plein à l'excès"
+    },
+    {
+      "word": "RÉHABILITATION",
+      "type": "nom",
+      "correct": "remise en état"
+    },
+    {
+      "word": "RÉITÉRER",
+      "type": "verbe",
+      "correct": "faire de nouveau"
+    },
+    {
+      "word": "REMÉDIER",
+      "type": "verbe",
+      "correct": "apporter une solution"
+    },
+    {
+      "word": "REQUÉRIR",
+      "type": "verbe",
+      "correct": "nécessiter"
+    },
+    {
+      "word": "RÉSILIER",
+      "type": "verbe",
+      "correct": "annuler"
+    },
+    {
+      "word": "RESTAURER",
+      "type": "verbe",
+      "correct": "récupérer"
+    },
+    {
+      "word": "RÉTIF",
+      "type": "adjectif",
+      "correct": "difficile à persuader"
+    },
+    {
+      "word": "RETOQUER",
+      "type": "verbe",
+      "correct": "rejeter un projet"
+    },
+    {
+      "word": "RETRACTATION",
+      "type": "nom",
+      "correct": "annulation d'un engagement"
+    },
+    {
+      "word": "RÉTROACTIVEMENT",
+      "type": "adverbe",
+      "correct": "en tenant compte de la période antérieure"
+    },
+    {
+      "word": "SACERDOCE",
+      "type": "nom",
+      "correct": "fonction qui exige que l'on donne beaucoup de soi"
+    },
+    {
+      "word": "S'ACQUITTER",
+      "type": "verbe",
+      "correct": "faire ce que l'on doit"
+    },
+    {
+      "word": "S'AFFRANCHIR",
+      "type": "verbe",
+      "correct": "se libérer"
+    },
+    {
+      "word": "SAGACITÉ",
+      "type": "nom",
+      "correct": "finesse d'esprit"
+    },
+    {
+      "word": "S'ALIÉNER",
+      "type": "verbe",
+      "correct": "détourner de soi"
+    },
+    {
+      "word": "SALUBRITÉ",
+      "type": "nom",
+      "correct": "hygiène"
+    },
+    {
+      "word": "SANCTUARISER",
+      "type": "verbe",
+      "correct": "protéger"
+    },
+    {
+      "word": "S'APPESANTIR",
+      "type": "verbe",
+      "correct": "insister trop longuement"
+    },
+    {
+      "word": "S'ARROGER",
+      "type": "verbe",
+      "correct": "s'attribuer d'une manière injuste"
+    },
+    {
+      "word": "S'ASTREINDRE",
+      "type": "verbe",
+      "correct": "s'obliger"
+    },
+    {
+      "word": "SCHISME",
+      "type": "nom",
+      "correct": "division dans un groupe"
+    },
+    {
+      "word": "SE DELITER",
+      "type": "verbe",
+      "correct": "se décomposer"
+    },
+    {
+      "word": "SE DÉPARTIR",
+      "type": "verbe",
+      "correct": "abandonner une attitude"
+    },
+    {
+      "word": "SE FOCALISER",
+      "type": "verbe",
+      "correct": "se concentrer"
+    },
+    {
+      "word": "SE FORMALISER",
+      "type": "verbe",
+      "correct": "se vexer"
+    },
+    {
+      "word": "SE PRÉMUNIR",
+      "type": "verbe",
+      "correct": "se protéger"
+    },
+    {
+      "word": "SE PRÉVALOIR",
+      "type": "verbe",
+      "correct": "se vanter"
+    },
+    {
+      "word": "SE RÉFÉRER",
+      "type": "verbe",
+      "correct": "s'en remettre à ce qui fait autorité"
+    },
+    {
+      "word": "SÉDENTAIRE",
+      "type": "adjectif",
+      "correct": "qui reste dans un même lieu"
+    },
+    {
+      "word": "SÉMANTIQUE",
+      "type": "adjectif",
+      "correct": "qui concerne la signification des mots"
+    },
+    {
+      "word": "SÉMINAIRE",
+      "type": "nom",
+      "correct": "réunion s'étendant en général sur plusieurs Jours"
+    },
+    {
+      "word": "SEMPITERNEL",
+      "type": "adjectif",
+      "correct": "qui n'en finit pas"
+    },
+    {
+      "word": "S'ENQUÉRIR",
+      "type": "verbe",
+      "correct": "se renseigner"
+    },
+    {
+      "word": "SENTENCIEUX",
+      "type": "adjectif",
+      "correct": "qui s'exprime avec une gravité peu naturelle"
+    },
+    {
+      "word": "SÉRENDIPITÉ",
+      "type": "nom",
+      "correct": "capacité à faire par hasard une découverte"
+    },
+    {
+      "word": "SERVILE",
+      "type": "adjectif",
+      "correct": "trop soumis"
+    },
+    {
+      "word": "SIBYLLIN",
+      "type": "adjectif",
+      "correct": "mystérieux"
+    },
+    {
+      "word": "SINE QUA NON",
+      "type": "nom",
+      "correct": "indispensable"
+    },
+    {
+      "word": "SOLLICITER",
+      "type": "verbe",
+      "correct": "faire appel à quelqu'un"
+    },
+    {
+      "word": "SOLLICITUDE",
+      "type": "nom",
+      "correct": "attention affectueuse"
+    },
+    {
+      "word": "SOLVABLE",
+      "type": "adjectif",
+      "correct": "qui a de quoi payer"
+    },
+    {
+      "word": "SOMMITE",
+      "type": "nom",
+      "correct": "personne remarquable dans un domaine"
+    },
+    {
+      "word": "SOUS-JACENT",
+      "type": "adjectif",
+      "correct": "qui ne se manifeste pas ouvertement"
+    },
+    {
+      "word": "SPECTRE",
+      "type": "nom",
+      "correct": "ensemble de faits de même nature"
+    },
+    {
+      "word": "SPÉCULER",
+      "type": "verbe",
+      "correct": "compter sur quelque chose pour réussir"
+    },
+    {
+      "word": "SPORADIQUE",
+      "type": "adjectif",
+      "correct": "qui se produit de temps en temps"
+    },
+    {
+      "word": "STANDARDISER",
+      "type": "verbe",
+      "correct": "rendre semblables"
+    },
+    {
+      "word": "STATU QUO",
+      "type": "nom",
+      "correct": "état actuel des choses"
+    },
+    {
+      "word": "STATUER",
+      "type": "verbe",
+      "correct": "décider"
+    },
+    {
+      "word": "STOIQUE",
+      "type": "adjectif",
+      "correct": "qui supporte avec courage"
+    },
+    {
+      "word": "STRICTO SENSU",
+      "type": "nom",
+      "correct": "très précisément"
+    },
+    {
+      "word": "STRUCTURER",
+      "type": "verbe",
+      "correct": "organiser"
+    },
+    {
+      "word": "SUBJECTIF",
+      "type": "adjectif",
+      "correct": "personnel"
+    },
+    {
+      "word": "SUBLIMINAL",
+      "type": "adjectif",
+      "correct": "qui n'est pas perçu consciemment"
+    },
+    {
+      "word": "SUBODORER",
+      "type": "verbe",
+      "correct": "deviner"
+    },
+    {
+      "word": "SUBORDINATION",
+      "type": "nom",
+      "correct": "dépendance"
+    },
+    {
+      "word": "SUBREPTICEMENT",
+      "type": "adverbe",
+      "correct": "d'une façon rapide et discrète"
+    },
+    {
+      "word": "SUBSÉQUEMMENT",
+      "type": "adverbe",
+      "correct": "ensuite"
+    },
+    {
+      "word": "SUBSIDE",
+      "type": "nom",
+      "correct": "aide financière"
+    },
+    {
+      "word": "SUBSTANTIEL",
+      "type": "adjectif",
+      "correct": "important"
+    },
+    {
+      "word": "SUBSTRAT",
+      "type": "nom",
+      "correct": "socle"
+    },
+    {
+      "word": "SUPERFÉTATOIRE",
+      "type": "adjectif",
+      "correct": "qui s'ajoute inutilement"
+    },
+    {
+      "word": "SUPERLATIF",
+      "type": "nom",
+      "correct": "terme exagéré"
+    },
+    {
+      "word": "SUPPUTER",
+      "type": "verbe",
+      "correct": "évaluer"
+    },
+    {
+      "word": "SURSEOIR",
+      "type": "verbe",
+      "correct": "suspendre"
+    },
+    {
+      "word": "SYMPTOMATIQUE",
+      "type": "adjectif",
+      "correct": "révélateur"
+    },
+    {
+      "word": "SYNERGIE",
+      "type": "nom",
+      "correct": "coopération"
+    },
+    {
+      "word": "SYNTHÉTIQUE",
+      "type": "adjectif",
+      "correct": "qui rassemble les éléments essentiels"
+    },
+    {
+      "word": "SYSTÉMIQUE",
+      "type": "adjectif",
+      "correct": "qui touche aux fondations du système concerné"
+    },
+    {
+      "word": "TACITE",
+      "type": "adjectif",
+      "correct": "sous-entendu"
+    },
+    {
+      "word": "TAUTOLOGIE",
+      "type": "nom",
+      "correct": "répétition inutile"
+    },
+    {
+      "word": "TEMPORISER",
+      "type": "verbe",
+      "correct": "reporter en attendant un moment plus favorable"
+    },
+    {
+      "word": "TENDANCIEUX",
+      "type": "adjectif",
+      "correct": "orienté"
+    },
+    {
+      "word": "TERGIVERSER",
+      "type": "verbe",
+      "correct": "tarder à agir"
+    },
+    {
+      "word": "TRANSCENDER",
+      "type": "verbe",
+      "correct": "dépasser"
+    },
+    {
+      "word": "TRANSIGER",
+      "type": "verbe",
+      "correct": "céder"
+    },
+    {
+      "word": "TRANSVERSAL",
+      "type": "adjectif",
+      "correct": "qui recouvre plusieurs domaines"
+    },
+    {
+      "word": "TRIBUTAIRE",
+      "type": "adjectif",
+      "correct": "dépendant"
+    },
+    {
+      "word": "TRUISME",
+      "type": "nom",
+      "correct": "vérité trop évidente"
+    },
+    {
+      "word": "UBUESQUE",
+      "type": "adjectif",
+      "correct": "totalement absurde"
+    },
+    {
+      "word": "USURPER",
+      "type": "verbe",
+      "correct": "s'approprier sans droit"
+    },
+    {
+      "word": "UTOPIQUE",
+      "type": "adjectif",
+      "correct": "qui paraît irréalisable dans la vraie vie"
+    },
+    {
+      "word": "VACANT",
+      "type": "adjectif",
+      "correct": "libre"
+    },
+    {
+      "word": "VACUITÉ",
+      "type": "nom",
+      "correct": "absence de valeur"
+    },
+    {
+      "word": "VECTEUR",
+      "type": "nom",
+      "correct": "ce qui transmet"
+    },
+    {
+      "word": "VELLÉITÉ",
+      "type": "nom",
+      "correct": "vague envie"
+    },
+    {
+      "word": "VÉLOCITÉ",
+      "type": "nom",
+      "correct": "vitesse dans le mouvement"
+    },
+    {
+      "word": "VENTILER",
+      "type": "verbe",
+      "correct": "répartir"
+    },
+    {
+      "word": "VERGOGNE",
+      "type": "nom",
+      "correct": "honte"
+    },
+    {
+      "word": "VERSATILE",
+      "type": "adjectif",
+      "correct": "qui change facilement d'opinion"
+    },
+    {
+      "word": "VERTUEUX",
+      "type": "adjectif",
+      "correct": "qui tend au bien"
+    },
+    {
+      "word": "VETO",
+      "type": "nom",
+      "correct": "refus"
+    },
+    {
+      "word": "VICIÉ",
+      "type": "adjectif",
+      "correct": "pollué"
+    },
+    {
+      "word": "VICISSITUDES",
+      "type": "nom",
+      "correct": "ensemble d'événements"
+    },
+    {
+      "word": "VINDICATIF",
+      "type": "adjectif",
+      "correct": "rancunier"
+    },
+    {
+      "word": "VINDICTE",
+      "type": "nom",
+      "correct": "punition"
+    },
+    {
+      "word": "VOLATIL",
+      "type": "adjectif",
+      "correct": "instable"
+    },
+    {
+      "word": "VOLUBILE",
+      "type": "adjectif",
+      "correct": "qui parle beaucoup, avec rapidité et facilité"
+    }
+  ]
+}
