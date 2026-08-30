@@ -59,6 +59,17 @@ function renderSetup(state) {
         </div>
         <div class="pill-group" id="count-filter-group">${renderCountPills(state)}</div>
       </div>
+      <div class="control-group" data-control="none-mode">
+        <div class="control-group-header">
+          <span class="control-label">Mode « Aucune de ces trois »</span>
+        </div>
+        <div class="pill-group">
+          <label class="pill${state.noneOfTheseMode ? ' active' : ''}">
+            <input type="checkbox" id="none-mode-toggle" ${state.noneOfTheseMode ? 'checked' : ''}>
+            <span>Activer</span>
+          </label>
+        </div>
+      </div>
     </div>
     <div class="card setup-start">
       <div class="setup-hint">${hint}</div>
@@ -181,6 +192,7 @@ function wireSetup(container, actions) {
   container.querySelectorAll('#count-filter-group .pill input').forEach(input => {
     input.addEventListener('change', () => actions.setQuestionCount(parseInt(input.value, 10)));
   });
+  container.querySelector('#none-mode-toggle').addEventListener('change', actions.toggleNoneOfTheseMode);
   const startBtn = container.querySelector('#start-btn');
   if (!startBtn.disabled) startBtn.addEventListener('click', actions.startQuiz);
 }

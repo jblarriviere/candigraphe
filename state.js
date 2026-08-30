@@ -17,6 +17,7 @@ export const state = {
   bank: [],
   questionCountOptions: QUESTION_COUNT_OPTIONS,
   questionCount: QUESTION_COUNT_OPTIONS[0],
+  noneOfTheseMode: false,
   quizLength: null, // questionCount snapshotted when the game started
   remainingWords: [], // shuffled queue for the run, drawn without replacement
   current: null,
@@ -52,7 +53,7 @@ function newQuestion() {
   state.answered = false;
   state.chosenIndex = null;
   const item = state.remainingWords.shift();
-  state.current = item ? buildQuestion(item, state.bank) : null;
+  state.current = item ? buildQuestion(item, state.bank, state.noneOfTheseMode) : null;
 }
 
 export const actions = {
@@ -77,6 +78,11 @@ export const actions = {
 
   setQuestionCount(n) {
     state.questionCount = n;
+    render();
+  },
+
+  toggleNoneOfTheseMode() {
+    state.noneOfTheseMode = !state.noneOfTheseMode;
     render();
   },
 
