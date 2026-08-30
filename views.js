@@ -172,7 +172,6 @@ function renderResults(state) {
       ${renderFailedWords(state)}
       <div class="feedback-row">
         <button class="next" id="play-again-btn">Rejouer →</button>
-        <button class="control-action" id="new-settings-btn">Nouveaux réglages</button>
       </div>
     </div>
   `;
@@ -223,5 +222,4 @@ function wireQuiz(container, state, actions) {
 
 function wireResults(container, actions) {
   container.querySelector('#play-again-btn').addEventListener('click', actions.playAgain);
-  container.querySelector('#new-settings-btn').addEventListener('click', actions.newSettings);
 }

@@ -127,10 +127,6 @@ export const actions = {
   },
 
   playAgain() {
-    actions.startQuiz();
-  },
-
-  newSettings() {
     state.screen = 'setup';
     render();
   },
