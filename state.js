@@ -5,7 +5,10 @@ import { loadWords, buildBank, startingLetter } from './words.js';
 import { buildQuestion } from './quiz.js';
 import { renderApp } from './views.js';
 
+const QUESTION_COUNT_OPTIONS = [10, 20, 30, 50];
+
 export const state = {
+  screen: 'setup', // 'setup' | 'quiz' | 'results'
   filters: {
     types: new Set(['nom', 'adjectif', 'adverbe', 'verbe']),
     letters: new Set(), // populated once words are loaded
@@ -13,6 +16,9 @@ export const state = {
   allLetters: [],
   words: [],
   bank: [],
+  questionCountOptions: QUESTION_COUNT_OPTIONS,
+  questionCount: QUESTION_COUNT_OPTIONS[0],
+  quizLength: null, // questionCount snapshotted when the game started
   current: null,
   answered: false,
   chosenIndex: null,
@@ -42,7 +48,6 @@ export const actions = {
     if (state.filters.types.has(type)) state.filters.types.delete(type);
     else state.filters.types.add(type);
     rebuildBank();
-    newQuestion();
     render();
   },
 
@@ -50,20 +55,33 @@ export const actions = {
     if (state.filters.letters.has(letter)) state.filters.letters.delete(letter);
     else state.filters.letters.add(letter);
     rebuildBank();
-    newQuestion();
     render();
   },
 
   selectAllLetters() {
     state.filters.letters = new Set(state.allLetters);
     rebuildBank();
-    newQuestion();
     render();
   },
 
   selectNoneLetters() {
     state.filters.letters.clear();
     rebuildBank();
+    render();
+  },
+
+  setQuestionCount(n) {
+    state.questionCount = n;
+    render();
+  },
+
+  startQuiz() {
+    rebuildBank();
+    state.quizLength = state.questionCount;
+    state.score = 0;
+    state.total = 0;
+    state.streak = 0;
+    state.screen = 'quiz';
     newQuestion();
     render();
   },
@@ -84,7 +102,20 @@ export const actions = {
   },
 
   next() {
-    newQuestion();
+    if (state.total >= state.quizLength) {
+      state.screen = 'results';
+    } else {
+      newQuestion();
+    }
+    render();
+  },
+
+  playAgain() {
+    actions.startQuiz();
+  },
+
+  newSettings() {
+    state.screen = 'setup';
     render();
   },
 };
@@ -97,6 +128,5 @@ export async function init(rootEl) {
   state.filters.letters = new Set(state.allLetters);
 
   rebuildBank();
-  newQuestion();
   render();
 }

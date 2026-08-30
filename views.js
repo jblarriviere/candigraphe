@@ -37,7 +37,27 @@ function renderLetterPills(state) {
   }).join('');
 }
 
-function renderControlsPanel(state) {
+function renderCountPills(state) {
+  return state.questionCountOptions.map(n => {
+    const active = state.questionCount === n;
+    return `
+      <label class="pill${active ? ' active' : ''}">
+        <input type="radio" name="question-count" value="${n}" ${active ? 'checked' : ''}>
+        <span>${n}</span>
+      </label>
+    `;
+  }).join('');
+}
+
+function renderSetup(state) {
+  const bankSize = state.bank.length;
+  const canStart = bankSize >= 4;
+  const hint = state.words.length === 0
+    ? "Impossible de charger la liste de mots. Essaie de recharger la page."
+    : canStart
+      ? `${bankSize} mots disponibles avec ces réglages.`
+      : "Pas assez de mots pour ces filtres. Essaie d'en sélectionner d'autres.";
+
   return `
     <div class="controls-panel" id="controls-panel">
       <div class="control-group" data-control="type">
@@ -56,18 +76,21 @@ function renderControlsPanel(state) {
         </div>
         <div class="pill-group" id="letter-filter-group">${renderLetterPills(state)}</div>
       </div>
+      <div class="control-group" data-control="count">
+        <div class="control-group-header">
+          <span class="control-label">Nombre de questions</span>
+        </div>
+        <div class="pill-group" id="count-filter-group">${renderCountPills(state)}</div>
+      </div>
+    </div>
+    <div class="card setup-start">
+      <div class="setup-hint">${hint}</div>
+      <button class="next" id="start-btn" ${canStart ? '' : 'disabled'}>Commencer →</button>
     </div>
   `;
 }
 
-function renderQuizArea(state) {
-  if (!state.current) {
-    const message = state.words.length === 0
-      ? "Impossible de charger la liste de mots. Essaie de recharger la page."
-      : "Pas assez de mots pour ces filtres. Essaie d'en sélectionner d'autres.";
-    return `<div class="card"><div class="empty-state">${message}</div></div>`;
-  }
-
+function renderQuiz(state) {
   const letters = ['A', 'B', 'C', 'D'];
   const options = state.current.options.map((o, i) => {
     let cls = 'option';
@@ -99,31 +122,63 @@ function renderQuizArea(state) {
     }
   }
 
+  const isLastQuestion = state.total >= state.quizLength;
+  const nextLabel = isLastQuestion ? 'Voir les résultats →' : 'Question suivante →';
+
   return `
+    <div class="stats-bar">
+      <div class="stat"><b>${state.score}</b>Score</div>
+      <div class="stat"><b>${state.total}</b>/ ${state.quizLength}</div>
+      <div class="stat"><b>${state.streak}</b>Série</div>
+    </div>
     <div class="card">
-      <div class="qnum">Question ${state.total + 1}</div>
+      <div class="qnum">Question ${state.total + 1} / ${state.quizLength}</div>
       <div class="word">${escapeHtml(state.current.item.word)}</div>
       <div class="instruction">Quelle est la définition correcte de ce mot ?</div>
       <div class="options" id="options-list">${options}</div>
       <div class="feedback-row">
         <div class="${feedbackClass}" id="feedback-text">${feedbackText}</div>
-        <button class="next" id="next-btn" style="display:${state.answered ? 'inline-block' : 'none'};">Question suivante →</button>
+        <button class="next" id="next-btn" style="display:${state.answered ? 'inline-block' : 'none'};">${nextLabel}</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderResults(state) {
+  const pct = state.quizLength > 0 ? Math.round((state.score / state.quizLength) * 100) : 0;
+  return `
+    <div class="card results-card">
+      <div class="qnum">Résultats</div>
+      <div class="word">${state.score} / ${state.quizLength}</div>
+      <div class="instruction">${pct}% de bonnes réponses</div>
+      <div class="feedback-row">
+        <button class="next" id="play-again-btn">Rejouer →</button>
+        <button class="control-action" id="new-settings-btn">Nouveaux réglages</button>
       </div>
     </div>
   `;
 }
 
 export function renderApp(container, state, actions) {
-  container.innerHTML = `
-    <div class="stats-bar">
-      <div class="stat"><b id="stat-score">${state.score}</b>Score</div>
-      <div class="stat"><b id="stat-total">${state.total}</b>Répondues</div>
-      <div class="stat"><b id="stat-streak">${state.streak}</b>Série</div>
-    </div>
-    ${renderControlsPanel(state)}
-    <div id="quiz-area">${renderQuizArea(state)}</div>
-  `;
+  if (!state.current && state.screen !== 'setup') {
+    // Bank became too small mid-flow (shouldn't happen: filters are only
+    // editable pre-quiz) — fall back to setup rather than showing a broken card.
+    state.screen = 'setup';
+  }
 
+  if (state.screen === 'setup') {
+    container.innerHTML = renderSetup(state);
+    wireSetup(container, actions);
+  } else if (state.screen === 'quiz') {
+    container.innerHTML = renderQuiz(state);
+    wireQuiz(container, state, actions);
+  } else if (state.screen === 'results') {
+    container.innerHTML = renderResults(state);
+    wireResults(container, actions);
+  }
+}
+
+function wireSetup(container, actions) {
   container.querySelectorAll('#type-filter-group .pill input').forEach(input => {
     input.addEventListener('change', () => actions.toggleType(input.value));
   });
@@ -132,11 +187,22 @@ export function renderApp(container, state, actions) {
   });
   container.querySelector('#letter-select-all').addEventListener('click', actions.selectAllLetters);
   container.querySelector('#letter-select-none').addEventListener('click', actions.selectNoneLetters);
+  container.querySelectorAll('#count-filter-group .pill input').forEach(input => {
+    input.addEventListener('change', () => actions.setQuestionCount(parseInt(input.value, 10)));
+  });
+  const startBtn = container.querySelector('#start-btn');
+  if (!startBtn.disabled) startBtn.addEventListener('click', actions.startQuiz);
+}
 
-  if (state.current) {
-    container.querySelectorAll('.option').forEach(btn => {
-      btn.addEventListener('click', () => actions.answer(parseInt(btn.dataset.index, 10)));
-    });
-    container.querySelector('#next-btn').addEventListener('click', actions.next);
-  }
+function wireQuiz(container, state, actions) {
+  container.querySelectorAll('.option').forEach(btn => {
+    btn.addEventListener('click', () => actions.answer(parseInt(btn.dataset.index, 10)));
+  });
+  const nextBtn = container.querySelector('#next-btn');
+  if (state.answered) nextBtn.addEventListener('click', actions.next);
+}
+
+function wireResults(container, actions) {
+  container.querySelector('#play-again-btn').addEventListener('click', actions.playAgain);
+  container.querySelector('#new-settings-btn').addEventListener('click', actions.newSettings);
 }
