@@ -26,6 +26,7 @@ export const state = {
   score: 0,
   total: 0,
   streak: 0,
+  failedWords: [], // { word, correct } for each miss this run, shown on results
 };
 
 let container = null;
@@ -94,6 +95,7 @@ export const actions = {
     state.score = 0;
     state.total = 0;
     state.streak = 0;
+    state.failedWords = [];
     state.screen = 'quiz';
     newQuestion();
     render();
@@ -110,6 +112,7 @@ export const actions = {
       state.streak++;
     } else {
       state.streak = 0;
+      state.failedWords.push(state.current.item);
     }
     render();
   },

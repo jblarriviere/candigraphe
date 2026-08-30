@@ -346,6 +346,38 @@
     margin-top: 28px;
   }
 
+  .review {
+    text-align: left;
+    margin-top: 28px;
+  }
+  .review .control-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  .review-item {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+  }
+  .review-word {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--burgundy-deep);
+    margin-right: 10px;
+  }
+  .review-def {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
   }

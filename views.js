@@ -145,6 +145,23 @@ function renderQuiz(state) {
   `;
 }
 
+function renderFailedWords(state) {
+  if (state.failedWords.length === 0) return '';
+  return `
+    <div class="review">
+      <div class="control-label">Mots à revoir</div>
+      <div class="review-list">
+        ${state.failedWords.map(w => `
+          <div class="review-item">
+            <span class="review-word">${escapeHtml(w.word)}</span>
+            <span class="review-def">${escapeHtml(w.correct)}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
 function renderResults(state) {
   const pct = state.quizLength > 0 ? Math.round((state.score / state.quizLength) * 100) : 0;
   return `
@@ -152,6 +169,7 @@ function renderResults(state) {
       <div class="qnum">Résultats</div>
       <div class="word">${state.score} / ${state.quizLength}</div>
       <div class="instruction">${pct}% de bonnes réponses</div>
+      ${renderFailedWords(state)}
       <div class="feedback-row">
         <button class="next" id="play-again-btn">Rejouer →</button>
         <button class="control-action" id="new-settings-btn">Nouveaux réglages</button>
