@@ -7,24 +7,6 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-function renderTypePills(state) {
-  const types = [
-    ['nom', 'Nom'],
-    ['adjectif', 'Adjectif'],
-    ['adverbe', 'Adverbe'],
-    ['verbe', 'Verbe'],
-  ];
-  return types.map(([value, label]) => {
-    const active = state.filters.types.has(value);
-    return `
-      <label class="pill${active ? ' active' : ''}">
-        <input type="checkbox" value="${value}" ${active ? 'checked' : ''}>
-        <span>${label}</span>
-      </label>
-    `;
-  }).join('');
-}
-
 function renderLetterPills(state) {
   return state.allLetters.map(letter => {
     const active = state.filters.letters.has(letter);
@@ -61,12 +43,6 @@ function renderSetup(state) {
 
   return `
     <div class="controls-panel" id="controls-panel">
-      <div class="control-group" data-control="type">
-        <div class="control-group-header">
-          <span class="control-label">Type de mot</span>
-        </div>
-        <div class="pill-group" id="type-filter-group">${renderTypePills(state)}</div>
-      </div>
       <div class="control-group" data-control="letter">
         <div class="control-group-header">
           <span class="control-label">Lettre initiale</span>
@@ -197,9 +173,6 @@ export function renderApp(container, state, actions) {
 }
 
 function wireSetup(container, actions) {
-  container.querySelectorAll('#type-filter-group .pill input').forEach(input => {
-    input.addEventListener('change', () => actions.toggleType(input.value));
-  });
   container.querySelectorAll('#letter-filter-group .pill input').forEach(input => {
     input.addEventListener('change', () => actions.toggleLetter(input.value));
   });

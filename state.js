@@ -10,7 +10,6 @@ const QUESTION_COUNT_OPTIONS = [10, 20, 30, 50, 100, 200];
 export const state = {
   screen: 'setup', // 'setup' | 'quiz' | 'results'
   filters: {
-    types: new Set(['nom', 'adjectif', 'adverbe', 'verbe']),
     letters: new Set(), // populated once words are loaded
   },
   allLetters: [],
@@ -57,13 +56,6 @@ function newQuestion() {
 }
 
 export const actions = {
-  toggleType(type) {
-    if (state.filters.types.has(type)) state.filters.types.delete(type);
-    else state.filters.types.add(type);
-    rebuildBank();
-    render();
-  },
-
   toggleLetter(letter) {
     if (state.filters.letters.has(letter)) state.filters.letters.delete(letter);
     else state.filters.letters.add(letter);

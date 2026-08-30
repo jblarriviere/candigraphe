@@ -15,7 +15,5 @@ export async function loadWords(url) {
 }
 
 export function buildBank(words, filters) {
-  return words.filter(w =>
-    filters.types.has(w.type) && filters.letters.has(startingLetter(w.word))
-  );
+  return words.filter(w => filters.letters.has(startingLetter(w.word)));
 }
