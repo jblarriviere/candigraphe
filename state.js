@@ -2,10 +2,10 @@
 // render() — the single point of entry into the DOM.
 
 import { loadWords, buildBank, startingLetter } from './words.js';
-import { buildQuestion } from './quiz.js';
+import { shuffle, buildQuestion } from './quiz.js';
 import { renderApp } from './views.js';
 
-const QUESTION_COUNT_OPTIONS = [10, 20, 30, 50];
+const QUESTION_COUNT_OPTIONS = [10, 20, 30, 50, 100, 200];
 
 export const state = {
   screen: 'setup', // 'setup' | 'quiz' | 'results'
@@ -19,6 +19,7 @@ export const state = {
   questionCountOptions: QUESTION_COUNT_OPTIONS,
   questionCount: QUESTION_COUNT_OPTIONS[0],
   quizLength: null, // questionCount snapshotted when the game started
+  remainingWords: [], // shuffled queue for the run, drawn without replacement
   current: null,
   answered: false,
   chosenIndex: null,
@@ -35,12 +36,23 @@ function render() {
 
 function rebuildBank() {
   state.bank = buildBank(state.words, state.filters);
+  clampQuestionCount();
+}
+
+// Keeps the selected question count from exceeding the filtered bank size,
+// so a run never has to repeat a word to reach its length.
+function clampQuestionCount() {
+  const validOptions = state.questionCountOptions.filter(n => n <= state.bank.length);
+  if (validOptions.length > 0 && !validOptions.includes(state.questionCount)) {
+    state.questionCount = validOptions[validOptions.length - 1];
+  }
 }
 
 function newQuestion() {
   state.answered = false;
   state.chosenIndex = null;
-  state.current = state.bank.length >= 4 ? buildQuestion(state.bank) : null;
+  const item = state.remainingWords.shift();
+  state.current = item ? buildQuestion(item, state.bank) : null;
 }
 
 export const actions = {
@@ -77,7 +89,8 @@ export const actions = {
 
   startQuiz() {
     rebuildBank();
-    state.quizLength = state.questionCount;
+    state.quizLength = Math.min(state.questionCount, state.bank.length);
+    state.remainingWords = shuffle(state.bank).slice(0, state.quizLength);
     state.score = 0;
     state.total = 0;
     state.streak = 0;

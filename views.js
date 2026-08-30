@@ -40,9 +40,10 @@ function renderLetterPills(state) {
 function renderCountPills(state) {
   return state.questionCountOptions.map(n => {
     const active = state.questionCount === n;
+    const disabled = n > state.bank.length;
     return `
-      <label class="pill${active ? ' active' : ''}">
-        <input type="radio" name="question-count" value="${n}" ${active ? 'checked' : ''}>
+      <label class="pill${active ? ' active' : ''}${disabled ? ' disabled' : ''}">
+        <input type="radio" name="question-count" value="${n}" ${active ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
         <span>${n}</span>
       </label>
     `;

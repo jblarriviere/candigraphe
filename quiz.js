@@ -9,9 +9,9 @@ export function shuffle(arr) {
 
 // Prefer distractors of the same grammatical type so the answer can't be
 // guessed by elimination; fall back to the full bank if there aren't enough.
-export function buildQuestion(bank) {
-  const item = bank[Math.floor(Math.random() * bank.length)];
-
+// `item` is the word to ask about (chosen by the caller so a run can avoid
+// repeats); `bank` is only the pool distractors are drawn from.
+export function buildQuestion(item, bank) {
   const pool = bank.filter(w => w.word !== item.word);
   const sameTypePool = item.type ? pool.filter(w => w.type === item.type) : [];
   const distractorPool = sameTypePool.length >= 3 ? sameTypePool : pool;

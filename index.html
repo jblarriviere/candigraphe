@@ -310,6 +310,11 @@
     color: var(--ink);
   }
   .pill:hover { border-color: var(--burgundy); }
+  .pill.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .pill.disabled:hover { border-color: var(--rule); }
 
   .empty-state {
     text-align: center;
