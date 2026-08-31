@@ -2383,7 +2383,12 @@
     {
       "word": "PRÔNER",
       "type": "verbe",
-      "correct": "recommander PROROGER: prolonger"
+      "correct": "recommander"
+    },
+    {
+      "word": "PROROGER",
+      "type": "verbe",
+      "correct": "prolonger"
     },
     {
       "word": "PROSAÏQUE",
